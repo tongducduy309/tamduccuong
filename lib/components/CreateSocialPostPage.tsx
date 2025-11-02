@@ -6,7 +6,7 @@ import { Label } from "./ui/label";
 import { ArrowLeft, Upload, Video, Image as ImageIcon, X } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 interface CreateSocialPostPageProps {
   onBack: () => void;

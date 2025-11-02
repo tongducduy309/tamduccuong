@@ -1,5 +1,4 @@
 import { SocialPostCard } from "./SocialPostCard";
-import { Button } from "./ui/button";
 import { Plus, TrendingUp, Clock, Flame } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { useState } from "react";

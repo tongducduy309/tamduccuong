@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
 import { Textarea } from "./ui/textarea";
 import { ArrowLeft, Heart, MessageCircle, Share2, Send, Play, Pause, MoreVertical } from "lucide-react";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 import { Separator } from "./ui/separator";
 
 interface SocialPost {
