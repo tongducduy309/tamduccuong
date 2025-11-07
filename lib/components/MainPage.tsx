@@ -272,7 +272,7 @@ export function MainPage({ products, onProductClick, onUploadClick, onCategoryCl
             <h4>Mã số thuế: <span className="font-semibold">0305971408</span></h4>
             <h4>Di động: <a className="font-semibold" href="tel:0918279361">0918.279.361</a> | <a className="font-semibold" href="tel:0933770378">0933.770.378</a></h4>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-col md:flex-row mt-2">
               <h4>Địa chỉ: </h4>
               <div>
 
@@ -287,8 +287,7 @@ export function MainPage({ products, onProductClick, onUploadClick, onCategoryCl
       {/* Footer */}
       <footer className="bg-muted/50 py-12 border-t">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-            <div></div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h4 className="mb-4">Thông Tin</h4>
               <ul className="space-y-2 text-muted-foreground text-sm">

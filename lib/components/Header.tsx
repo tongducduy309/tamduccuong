@@ -59,9 +59,9 @@ export function Header({ onUploadClick, onLogoClick, onProfileClick, onVintageCl
               <User className="h-5 w-5" />
             </Button> */}
             <Button onClick={() => (window.location.href = "tel:0933770378")}>Gọi Ngay <PhoneCall /></Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            {/* <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
-            </Button>
+            </Button> */}
           </nav>
         </div>
 
@@ -69,7 +69,7 @@ export function Header({ onUploadClick, onLogoClick, onProfileClick, onVintageCl
         <div className="md:hidden mt-4 relative">
           <Input
             type="search"
-            placeholder="Search materials..."
+            placeholder="Tìm kiếm vật tư..."
             className="w-full pl-10"
           />
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
