@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const SlideInText = ({ text = "Simplicity is the ultimate sophistication." }: { text?: string }) => {
     return (
-        <h2 className="text-2xl md:text-5xl font-bold text-center" style={{ color: "#ff914d" }}>
+        <h2 className="text-xl sm:text-2xl md:text-5xl font-bold text-center text-nowrap" style={{ color: "#ff914d" }}>
             {text.split('').map((char, i) => (
                 <motion.span
                     key={i}
