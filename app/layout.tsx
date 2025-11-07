@@ -28,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${balooBhai2.variable} ${phudu.variable}`}>
+      <head>
+        <meta name="google-site-verification" content="7lf1VdNiAhsfiklzsWWWOtWtMAFNWrsOMFIu0LtRuwk" />
+      </head>
       <body
         className={`${balooBhai2.variable} ${phudu.variable}`}
       >
