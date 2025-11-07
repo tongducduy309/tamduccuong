@@ -1,5 +1,6 @@
 "use client"
 import { CategoryCard } from "@/lib/components/CategoryCard";
+import { ContactPage } from "@/lib/components/ContactPage";
 import { MainPage } from "@/lib/components/MainPage";
 import { ProductCard } from "@/lib/components/ProductCard";
 import { Button } from "@/lib/components/ui/button";
@@ -68,27 +69,20 @@ export default function HomePage() {
           </div>
 
           <TabsContent value="store" className="mt-0">
-            <MainPage products={[]} onProductClick={function (id: string): void {
-              throw new Error("Function not implemented.");
-            }} onUploadClick={function (): void {
-              throw new Error("Function not implemented.");
-            }} />
+            <MainPage/>
           </TabsContent>
 
           <TabsContent value="contact" className="mt-0">
-            {/* <SocialFeedPage
-            posts={socialPosts}
-            onPostClick={onSocialPostClick}
-            onCreatePostClick={onCreateSocialPostClick}
-          /> */}
+            <ContactPage></ContactPage>
           </TabsContent>
 
           <TabsContent value="price_quote" className="mt-0">
-            {/* <ForumHomePage
-            posts={forumPosts}
-            onPostClick={onForumPostClick}
-            onCreatePostClick={onCreatePostClick}
-          /> */}
+            <ul className="space-y-2 list-disc list-inside text-base text-zinc-700 dark:text-zinc-300">
+              <li>Vui lòng liên hệ với chúng tôi để nhận bảng báo giá chi tiết và ưu đãi tốt nhất cho các sản phẩm thép và vật liệu xây dựng mà bạn quan tâm.</li>
+              <li>Chúng tôi cam kết cung cấp dịch vụ khách hàng xuất sắc và hỗ trợ bạn trong việc lựa chọn sản phẩm phù hợp với nhu cầu của bạn.</li>
+              <li>Hãy gọi điện hoặc gửi email (<><a className="text-blue-500" href="mailto:tongducduyy@gmail.com">tongducduyy@gmail.com</a></>) cho chúng tôi ngay hôm nay để được tư vấn miễn phí và nhận báo giá nhanh chóng!</li>
+            </ul>
+             
           </TabsContent>
         </Tabs>
       </div>

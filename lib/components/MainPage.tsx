@@ -1,6 +1,5 @@
 
 import { CategoryCard } from "./CategoryCard";
-import { ProductCard } from "./ProductCard";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import {
@@ -13,11 +12,9 @@ import {
   Building2,
   PaintBucket,
   SunSnow,
-  ArrowUpRight,
   Award,
 } from "lucide-react";
-import { FlipWords } from "./resize-handle";
-import SlideInView, { SlideInText } from "./slideIn";
+import { SlideInText } from "./slideIn";
 import Marquee from "./marquee";
 import Divider from "./ui/divider";
 
@@ -31,25 +28,8 @@ const categories = [
 
 ];
 
-interface Product {
-  id: string;
-  title: string;
-  price: number;
-  location: string;
-  imageUrl: string;
-  condition: "Excellent" | "Good" | "Fair";
-  category: string;
-}
 
-interface MainPageProps {
-  products: Product[];
-  onProductClick: (id: string) => void;
-  onUploadClick: () => void;
-  onCategoryClick?: (category: string) => void;
-  onVintageClick?: () => void;
-}
-
-export function MainPage({ products, onProductClick, onUploadClick, onCategoryClick, onVintageClick }: MainPageProps) {
+export function MainPage() {
   return (
     <>
       {/* Hero Section */}
@@ -62,10 +42,10 @@ export function MainPage({ products, onProductClick, onUploadClick, onCategoryCl
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg">
-                Xem Sản Phẩm
+                Về Chúng Tôi
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" onClick={onUploadClick}>
+              <Button size="lg" variant="outline" >
                 Nhận Báo Giá Nhanh
               </Button>
             </div>
@@ -87,7 +67,7 @@ export function MainPage({ products, onProductClick, onUploadClick, onCategoryCl
               <CategoryCard
                 key={category.title}
                 {...category}
-                onClick={() => onCategoryClick?.(category.title)}
+                // onClick={() => onCategoryClick?.(category.title)}
               />
             ))}
           </Marquee>
@@ -231,6 +211,31 @@ export function MainPage({ products, onProductClick, onUploadClick, onCategoryCl
             className="my-8"
             children={<span className="text-muted-foreground">Liên Hệ Ngay</span>}
           />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <Image
+                    src="/images/map.png"
+
+                    alt="Bản đồ"
+                    width={600}
+                    height={600}
+                    className="object-contain"
+                  />
+            </div>
+
+            <div>
+              <h3 className="mb-4 font-bold">Giờ làm việc</h3>
+              <ul className="space-y-2 text-muted-foreground text-md">
+                <li>
+                  Thứ Hai - Thứ Sáu: 7:00 - 17:00 (7:00 AM - 5:00 PM)
+                </li>
+                <li>
+                  Thứ Bảy - Chủ Nhật: 7:00 - 12:00 (7:00 AM - 12:00 PM)
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
 
@@ -272,11 +277,11 @@ export function MainPage({ products, onProductClick, onUploadClick, onCategoryCl
             <h4>Mã số thuế: <span className="font-semibold">0305971408</span></h4>
             <h4>Di động: <a className="font-semibold" href="tel:0918279361">0918.279.361</a> | <a className="font-semibold" href="tel:0933770378">0933.770.378</a></h4>
 
-            <div className="flex gap-2 flex-col md:flex-row mt-2">
+            <div className="flex gap-2 flex-col md:flex-row mt-2" >
               <h4>Địa chỉ: </h4>
               <div>
 
-                <span className="font-semibold">413 Đường Nguyễn Văn Tạo, Xã Long Thới, Huyện Nhà Bè, Thành phố Hồ Chí Minh (Cũ)</span>
+                <p className="font-semibold">413 Đường Nguyễn Văn Tạo, Xã Long Thới, Huyện Nhà Bè, Thành phố Hồ Chí Minh (Cũ)</p>
                 <p className="font-semibold">413 Đường Nguyễn Văn Tạo, Xã Hiệp Phước, Thành phố Hồ Chí Minh</p>
               </div>
             </div>
