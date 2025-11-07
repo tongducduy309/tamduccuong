@@ -1,4 +1,4 @@
-import { Search, Menu, Heart, User, Sparkles } from "lucide-react";
+import { Search, Menu, Heart, User, Sparkles, PhoneCall } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
@@ -27,7 +27,7 @@ export function Header({ onUploadClick, onLogoClick, onProfileClick, onVintageCl
           <div className="hidden md:flex flex-1 max-w-2xl relative">
             <Input
               type="search"
-              placeholder="Search for materials, tools, equipment..."
+              placeholder="Tìm kiếm vật tư..."
               className="w-full pl-10"
             />
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -41,7 +41,7 @@ export function Header({ onUploadClick, onLogoClick, onProfileClick, onVintageCl
               onClick={onVintageClick}
             >
               <Sparkles className="h-4 w-4" />
-              <span>Vintage</span>
+              <span>Uy Tín Hàng Đầu</span>
             </Button>
             <Button 
               variant="ghost" 
@@ -52,13 +52,13 @@ export function Header({ onUploadClick, onLogoClick, onProfileClick, onVintageCl
             >
               <Sparkles className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="hidden sm:flex">
+            {/* <Button variant="ghost" size="icon" className="hidden sm:flex">
               <Heart className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" onClick={onProfileClick}>
               <User className="h-5 w-5" />
-            </Button>
-            <Button onClick={onUploadClick}>Sell Materials</Button>
+            </Button> */}
+            <Button onClick={() => (window.location.href = "tel:0933770378")}>Gọi Ngay <PhoneCall /></Button>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
             </Button>
