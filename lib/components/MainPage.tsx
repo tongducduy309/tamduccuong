@@ -250,7 +250,7 @@ export function MainPage() {
             <div className="flex items-center justify-between mb-4">
               <h2 className="font-bold text-lg">CÔNG TY TNHH MỘT THÀNH VIÊN DỊCH VỤ TÔN THÉP TÂM ĐỨC CƯỜNG</h2>
               <div className="flex gap-4">
-                <a href="https://zalo.me/0918279361">
+                <a href="https://zalo.me/0918279361" className="animate-(--animation-pulse) ">
                   <Image
                     src="/images/zalo.png"
 
@@ -261,7 +261,7 @@ export function MainPage() {
                   />
                 </a>
 
-                <a href="https://zalo.me/0933770378">
+                <a href="https://zalo.me/0933770378" className="animate-(--animation-pulse) delay-2000">
                   <Image
                     src="/images/zalo.png"
 
