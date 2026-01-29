@@ -1,38 +1,21 @@
 
-import { CategoryCard } from "./CategoryCard";
-import { Button } from "./ui/button";
+"use client"
+import { Button } from "../components/ui/button";
 import Image from "next/image";
 import {
-    Layers,
-    Home,
     ArrowRight,
-    Sparkles,
-    Bolt,
-    Boxes,
-    Building2,
-    PaintBucket,
-    SunSnow,
-    Award,
     PhoneCall,
 } from "lucide-react";
-import { SlideInText } from "./slideIn";
-import Marquee from "./marquee";
-import Divider from "./ui/divider";
+import { SlideInText } from "../components/slideIn";
+import Divider from "../components/ui/divider";
+import Layout from "../layouts/(layout)/layout";
 
-const categories = [
-    { icon: Layers, title: "Tôn Lạnh / Tôn Kẽm", subtitle: "cuộn, tấm – nhiều độ dày" },
-    { icon: PaintBucket, title: "Tôn Màu", subtitle: "AZ/Z, bảng màu đa dạng" },
-    { icon: Boxes, title: "Thép Hộp", subtitle: "đa kích thước, mác thép" },
-    { icon: Building2, title: "Thép Hình (I / H / U / V)", subtitle: "tiêu chuẩn JIS/ASTM" },
-    { icon: SunSnow, title: "Chống Nóng", subtitle: "mát mẻ, sạch sẽ" },
-    { icon: Bolt, title: "Phụ Kiện", subtitle: "vít bắn tôn, keo" },
 
-];
 
 
 export function ContactPage() {
     return (
-        <>
+        <Layout>
             {/* Hero Section */}
             <section className="bg-gradient-to-b from-primary/5 to-background py-16 md:py-24">
                 <div className="container mx-auto px-4">
@@ -152,53 +135,6 @@ export function ContactPage() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="bg-muted/50 py-12 border-t">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-8">
-                        <div>
-                            <h4 className="mb-4">Thông Tin</h4>
-                            <ul className="space-y-2 text-muted-foreground text-sm">
-                                <li>
-                                    <a href="#" className="hover:text-foreground">
-                                        Về Chúng Tôi
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="mb-4">Dịch vụ</h4>
-                            <ul className="space-y-2 text-muted-foreground text-sm">
-                                <li>
-                                    <a href="#" className="hover:text-foreground">
-                                        Nhận Bảng Báo Giá
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="mb-4">Hỗ Trợ</h4>
-                            <ul className="space-y-2 text-muted-foreground text-sm">
-                                <li>
-                                    <a href="#" className="hover:text-foreground">
-                                        Liên Hệ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="hover:text-foreground">
-                                        Câu hỏi thường gặp
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="text-center pt-8 border-t border-border">
-                        <p className="text-muted-foreground text-sm">
-                            © 2025 TDC. All rights reserved.
-                        </p>
-                    </div>
-                </div>
-            </footer>
-        </>
+        </Layout>
     );
 }
