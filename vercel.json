@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "https://tamduccuong.vercel.app/:path*",
-      "destination": "https://tamduccuong.com/:path*",
-      "permanent": true
-    }
-  ]
-}
