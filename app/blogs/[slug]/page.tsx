@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params; // ✅ unwrap Promise
 
   try {
     const { frontmatter } = await getPostBySlug(slug);
@@ -23,16 +23,8 @@ export async function generateMetadata({
     return {
       title,
       description,
-
-      alternates: {
-        canonical: url,
-      },
-
-      robots: {
-        index: true,
-        follow: true,
-      },
-
+      alternates: { canonical: url },
+      robots: { index: true, follow: true },
       openGraph: {
         type: "article",
         locale: "vi_VN",
@@ -40,16 +32,8 @@ export async function generateMetadata({
         title,
         description,
         siteName: "Tâm Đức Cường",
-        images: [
-          {
-            url: ogImage,
-            width: 1200,
-            height: 630,
-            alt: title,
-          },
-        ],
+        images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
       },
-
       twitter: {
         card: "summary_large_image",
         title,
@@ -57,7 +41,8 @@ export async function generateMetadata({
         images: [ogImage],
       },
     };
-  } catch {
+  } catch (e: any) {
+    if (e?.code === "POST_NOT_FOUND") notFound();
     return {};
   }
 }
