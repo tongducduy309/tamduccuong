@@ -5,6 +5,52 @@ import Image from "next/image";
 import { Badge } from "@/lib/components/ui/badge";
 import { getAllPosts } from "@/lib/blog";
 import TimeAgo from "@/lib/components/TimeAgo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Tin tức – Kiến thức vật liệu xây dựng",
+    template: "%s | Tâm Đức Cường",
+  },
+
+  description:
+    "Cập nhật tin tức, kiến thức và kinh nghiệm về tôn, sắt, thép, xà gồ, vật liệu xây dựng. Thông tin mới nhất từ Tâm Đức Cường – Nhà Bè, Hồ Chí Minh.",
+
+  alternates: {
+    canonical: "https://tamduccuong.vercel.app/blogs",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    url: "https://tamduccuong.vercel.app/blogs",
+    title: "Tin tức – Kiến thức vật liệu xây dựng",
+    description:
+      "Tổng hợp bài viết về tôn, sắt, thép, xà gồ và vật liệu xây dựng. Cập nhật thường xuyên từ Tâm Đức Cường (Nhà Bè, Hồ Chí Minh).",
+    siteName: "Tâm Đức Cường",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Tin tức vật liệu xây dựng – Tâm Đức Cường",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Tin tức – Kiến thức vật liệu xây dựng",
+    description:
+      "Chia sẻ kiến thức và cập nhật tin tức về tôn, sắt, thép, vật liệu xây dựng.",
+    images: ["/og.png"],
+  },
+};
 
 
 

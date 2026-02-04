@@ -1,6 +1,66 @@
 import Layout from "@/lib/layouts/(layout)/layout";
 import { notFound } from "next/navigation";
 import { getPostBySlug } from "@/lib/blog";
+import type { Metadata } from "next";
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
+
+  try {
+    const { frontmatter } = await getPostBySlug(slug);
+
+    const title = frontmatter.title;
+    const description =
+      frontmatter.excerpt ||
+      "Chia sẻ kiến thức và thông tin hữu ích về tôn, sắt, thép, xà gồ và vật liệu xây dựng.";
+
+    const url = `https://tamduccuong.vercel.app/blogs/${slug}`;
+    const ogImage = frontmatter.cover || "/og.png";
+
+    return {
+      title,
+      description,
+
+      alternates: {
+        canonical: url,
+      },
+
+      robots: {
+        index: true,
+        follow: true,
+      },
+
+      openGraph: {
+        type: "article",
+        locale: "vi_VN",
+        url,
+        title,
+        description,
+        siteName: "Tâm Đức Cường",
+        images: [
+          {
+            url: ogImage,
+            width: 1200,
+            height: 630,
+            alt: title,
+          },
+        ],
+      },
+
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [ogImage],
+      },
+    };
+  } catch {
+    return {};
+  }
+}
 
 export default async function BlogDetailPage({
   params,
