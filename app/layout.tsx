@@ -49,6 +49,8 @@ export const metadata: Metadata = {
     "báo giá tôn",
     "báo giá thép",
     "giao hàng vật liệu xây dựng",
+    "nhà máy tôn",
+    "nhà máy tôn thép"
   ],
 
   applicationName: siteName,
