@@ -98,7 +98,7 @@ Mục tiêu của công ty không chỉ là **cung cấp vật tư**, mà còn t
 
 - **Công ty:** Công ty TNHH MTV Dịch Vụ Tôn Thép Tâm Đức Cường  
 - **Hotline:** 0918.279.361 – 0933.770.378  
-- **Email:** tongducduyy@gmail.com  
+- **Email:** nhamaytontheptamduccuong@gmail.com  
 - **Địa chỉ:** 413 Nguyễn Văn Tạo, Xã Hiệp Phước, TP. Hồ Chí Minh  
 
 ---

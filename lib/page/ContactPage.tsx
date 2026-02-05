@@ -16,6 +16,13 @@ import Layout from "../layouts/(layout)/layout";
 export function ContactPage() {
     return (
         <Layout>
+            <head>
+                <meta name="telephone" content="+84 933 770 378" />
+                <meta name="telephone" content="+84 918 279 361" />
+                <meta name="email" content="nhamaytontheptamduccuong@gmail.com" />
+                <meta name="address" content="413 Nguyễn Văn Tạo, Xã Long Thới, Huyện Nhà Bè, TP.HCM" />
+                <meta name="address" content="413 Nguyễn Văn Tạo, Xã Hiệp Phước, TP.HCM" />
+            </head>
             {/* Hero Section */}
             <section className="bg-gradient-to-b from-primary/5 to-background py-16 md:py-24">
                 <div className="container mx-auto px-4">

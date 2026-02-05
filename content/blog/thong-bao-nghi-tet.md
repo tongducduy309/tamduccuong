@@ -77,7 +77,7 @@ Mọi yêu cầu phát sinh sẽ được chúng tôi **xử lý ngay khi hoạt
 **Hotline:**  📞 0918.279.361 – 0933.770.378  
 
 
-**Email:**  ✉️ tongducduyy@gmail.com  
+**Email:**  ✉️ nhamaytontheptamduccuong@gmail.com  
 
 
 ---
