@@ -137,6 +137,23 @@ export function Footer() {
                 />
               </a>
             </div>
+
+            <div className="mt-4">
+              <h4 className="mb-4 font-semibold">Fanpage</h4>
+              <div className="mt-4 flex gap-3">
+              <a
+                href="https://www.facebook.com/nhamaytontheptamduccuong/"
+                target="_blank"
+                className="rounded-lg border p-2 hover:bg-amber-50"
+              >
+                <img
+                  src="/images/facebook.png"
+                  alt="facebook"
+                  className="h-5 w-5"
+                />
+              </a>
+            </div>
+            </div>
           </div>
         </div>
 
