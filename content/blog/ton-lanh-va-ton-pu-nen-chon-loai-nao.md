@@ -3,6 +3,7 @@ title: "Tôn lạnh và tôn PU cách nhiệt: Nên chọn loại nào cho công
 date: "2026-12-08"
 excerpt: "Tìm hiểu điểm khác nhau giữa tôn lạnh một lớp và tôn PU cách nhiệt, ưu nhược điểm, ứng dụng và các thông số cần so sánh trước khi chọn mua."
 tags: ["Tôn lạnh", "Tôn PU", "Tôn cách nhiệt", "Chống nóng mái nhà"]
+relatedProducts: ["ton-lanh-ton-kem","ton-pu-cach-nhiet","panel-pu-eps"]
 cover: "/images/blog/ton-pu-cach-nhiet-ai.svg"
 ---
 
@@ -100,3 +101,10 @@ Tôn Thép Tâm Đức Cường cung cấp các dòng tôn lạnh, tôn màu, t�
 Xem [trang liên hệ](/contact) hoặc [yêu cầu báo giá](/quotation).
 
 *Lưu ý: Thông tin trong bài viết mang tính tham khảo. Hãy sử dụng tài liệu kỹ thuật của đúng sản phẩm và tham khảo đơn vị thiết kế/thi công để lựa chọn cấu tạo phù hợp.*
+
+
+## Sản phẩm liên quan tại Tâm Đức Cường
+
+- [ton lanh ton kem](/san-pham/ton-lanh-ton-kem)
+- [ton pu cach nhiet](/san-pham/ton-pu-cach-nhiet)
+- [panel pu eps](/san-pham/panel-pu-eps)
