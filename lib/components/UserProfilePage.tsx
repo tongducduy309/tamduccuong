@@ -173,7 +173,7 @@ export function UserProfilePage({
                 <Package className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                 <h3 className="mb-2">No active listings</h3>
                 <p className="text-muted-foreground">
-                  This seller doesn't have any active listings at the moment.
+                  This seller doesn&apos;t have any active listings at the moment.
                 </p>
               </Card>
             )}
@@ -229,7 +229,7 @@ export function UserProfilePage({
                   <Star className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="mb-2">No reviews yet</h3>
                   <p className="text-muted-foreground">
-                    This seller hasn't received any reviews yet.
+                    This seller hasn&apos;t received any reviews yet.
                   </p>
                 </Card>
               )}
