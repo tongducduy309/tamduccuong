@@ -9,24 +9,28 @@ function cn(...classes: (string | boolean | undefined | null)[]): string {
 const useAnimationFrame = (callback: (time: number, delta: number) => void) => {
   const requestRef = useRef<number | null>(null);
   const previousTimeRef = useRef<number | null>(null);
+  const callbackRef = useRef(callback);
 
-  const animate = useCallback((time: number) => {
-    if (previousTimeRef.current !== null && previousTimeRef.current !== undefined) {
-      const delta = time - previousTimeRef.current;
-      callback(time, delta);
-    }
-    previousTimeRef.current = time;
-    requestRef.current = requestAnimationFrame(animate);
+  useEffect(() => {
+    callbackRef.current = callback;
   }, [callback]);
 
   useEffect(() => {
+    const animate = (time: number) => {
+      if (previousTimeRef.current !== null) {
+        callbackRef.current(time, time - previousTimeRef.current);
+      }
+      previousTimeRef.current = time;
+      requestRef.current = requestAnimationFrame(animate);
+    };
+
     requestRef.current = requestAnimationFrame(animate);
     return () => {
-      if (requestRef.current) {
+      if (requestRef.current !== null) {
         cancelAnimationFrame(requestRef.current);
       }
     };
-  }, [animate]);
+  }, []);
 };
 
 interface MarqueeProps extends React.ComponentPropsWithoutRef<"div"> {
