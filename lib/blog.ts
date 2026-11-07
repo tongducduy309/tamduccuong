@@ -16,6 +16,7 @@ export type BlogFrontmatter = {
   cover?: string;
   tags?: string[];
   readingMinutes?: number;
+  relatedProducts?: string[];
 };
 
 export type BlogPost = BlogFrontmatter & { slug: string };
@@ -121,6 +122,7 @@ export async function getPostBySlug(slug: string) {
       excerpt: toOptionalString(data.excerpt),
       cover: toOptionalString(data.cover),
       tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
+      relatedProducts: Array.isArray(data.relatedProducts) ? data.relatedProducts.map(String) : [],
       readingMinutes: Number(data.readingMinutes) > 0
         ? Math.ceil(Number(data.readingMinutes))
         : estimateReadingMinutes(normalizedContent),
