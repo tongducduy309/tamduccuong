@@ -20,9 +20,9 @@ const phudu = Phudu({
 const siteName = "Tâm Đức Cường - Vật liệu xây dựng";
 const siteUrl = "https://tamduccuong.vercel.app";
 
-const defaultTitle = "Tôn, sắt thép, xà gồ tại Nhà Bè | Tâm Đức Cường";
+const defaultTitle = "Tôn, sắt thép, xà gồ tại Hiệp Phước, TP.HCM | Tâm Đức Cường";
 const defaultDescription =
-  "Tâm Đức Cường cung cấp tôn lợp, tôn màu, sắt thép, thép hộp, xà gồ và vật tư xây dựng tại Nhà Bè, TP.HCM. Tư vấn quy cách, báo giá và giao hàng công trình.";
+  "Tâm Đức Cường cung cấp tôn lợp, tôn màu, sắt thép, thép hộp, xà gồ và vật tư xây dựng tại 413 Nguyễn Văn Tạo, Xã Hiệp Phước, TP.HCM. Liên hệ để xác nhận quy cách, báo giá và phạm vi giao hàng.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -144,7 +144,7 @@ export default function RootLayout({
                   name: "Nhà máy tôn thép Tâm Đức Cường",
                   alternateName: "Tâm Đức Cường",
                   url: "https://tamduccuong.vercel.app",
-                  description: "Cung cấp tôn lợp, tôn màu, sắt thép, thép hộp, thép hình, xà gồ, panel, phụ kiện và gia công vật tư xây dựng tại Nhà Bè, TP.HCM.",
+                  description: "Cung cấp tôn lợp, tôn màu, sắt thép, thép hộp, thép hình, xà gồ, panel, phụ kiện và gia công vật tư xây dựng tại Hiệp Phước, TP.HCM.",
                   telephone: ["+84933770378", "+84918279361"],
                   email: "nhamaytontheptamduccuong@gmail.com",
                   address: {
@@ -155,7 +155,7 @@ export default function RootLayout({
                     addressCountry: "VN"
                   },
                   areaServed: [
-                    { "@type": "Place", name: "Nhà Bè, Thành phố Hồ Chí Minh" },
+                    { "@type": "Place", name: "Hiệp Phước, Thành phố Hồ Chí Minh" },
                     { "@type": "City", name: "Thành phố Hồ Chí Minh" }
                   ],
                   knowsAbout: [
