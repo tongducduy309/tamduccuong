@@ -179,3 +179,49 @@ body {
 .float-soft {
   animation: floatY 5s ease-in-out infinite;
 }
+
+/* Smooth route navigation feedback */
+.navigation-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 9999;
+  height: 3px;
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+
+.navigation-progress > span:first-child {
+  display: block;
+  width: 34%;
+  height: 100%;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, #d97706, #fbbf24, #f59e0b);
+  box-shadow: 0 0 12px rgba(217, 119, 6, 0.35);
+  animation: navigation-progress-move 1.15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.navigation-progress[data-state="complete"] > span:first-child {
+  width: 100%;
+  animation: navigation-progress-finish 220ms ease-out forwards;
+}
+
+@keyframes navigation-progress-move {
+  0% { transform: translateX(-110%); }
+  100% { transform: translateX(310%); }
+}
+
+@keyframes navigation-progress-finish {
+  from { width: 70%; opacity: 1; }
+  to { width: 100%; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-progress > span:first-child {
+    animation: none;
+    width: 65%;
+  }
+  .navigation-progress[data-state="complete"] > span:first-child {
+    width: 100%;
+  }
+}
