@@ -30,21 +30,21 @@ import Layout from "../layouts/(layout)/layout";
 import Link from "next/link";
 
 const categories = [
-  { icon: Layers, title: "Tôn Lạnh / Tôn Kẽm", subtitle: "Cuộn, tấm – nhiều độ dày" },
-  { icon: PaintBucket, title: "Tôn Màu", subtitle: "AZ/Z, bảng màu đa dạng" },
-  { icon: Boxes, title: "Thép Hộp", subtitle: "Đa kích thước, mác thép" },
-  { icon: Building2, title: "Thép Hình (I / H / U / V)", subtitle: "Tiêu chuẩn phổ biến" },
+  { icon: Layers, title: "Tôn Lạnh / Tôn Kẽm", href: "/san-pham/ton-lanh-ton-kem", subtitle: "Cuộn, tấm – nhiều độ dày" },
+  { icon: PaintBucket, title: "Tôn Màu", href: "/san-pham/ton-mau", subtitle: "AZ/Z, bảng màu đa dạng" },
+  { icon: Boxes, title: "Thép Hộp", href: "/san-pham/thep-hop", subtitle: "Đa kích thước, mác thép" },
+  { icon: Building2, title: "Thép Hình (I / H / U / V)", href: "/san-pham/thep-hinh", subtitle: "Tiêu chuẩn phổ biến" },
 
-  { icon: Warehouse, title: "Tấm Panel (PU/EPS)", subtitle: "Cách nhiệt, cách âm cho kho lạnh, nhà xưởng" },
-  { icon: SquareStack, title: "Tôn PU", subtitle: "3 lớp cách nhiệt, chống nóng hiệu quả" },
+  { icon: Warehouse, title: "Tấm Panel (PU/EPS)", href: "/san-pham/panel-pu-eps", subtitle: "Cách nhiệt, cách âm cho kho lạnh, nhà xưởng" },
+  { icon: SquareStack, title: "Tôn PU", href: "/san-pham/ton-pu-cach-nhiet", subtitle: "3 lớp cách nhiệt, chống nóng hiệu quả" },
 
-  { icon: Wrench, title: "Uốn Vòm", subtitle: "Gia công uốn vòm theo thiết kế công trình" },
-  { icon: BetweenHorizontalStart, title: "Nhấn Máng", subtitle: "Gia công máng xối, thoát nước theo yêu cầu" },
+  { icon: Wrench, title: "Uốn Vòm", href: "/san-pham/uon-vom-nhan-mang", subtitle: "Gia công uốn vòm theo thiết kế công trình" },
+  { icon: BetweenHorizontalStart, title: "Nhấn Máng", href: "/san-pham/uon-vom-nhan-mang", subtitle: "Gia công máng xối, thoát nước theo yêu cầu" },
 
-  { icon: PanelsTopLeft, title: "Alu", subtitle: "Tấm ốp nhôm nhựa thẩm mỹ, bền ngoài trời" },
-  { icon: Square, title: "Tấm Nhựa Poly", subtitle: "Lấy sáng, bền, dùng cho mái che và giếng trời" },
+  { icon: PanelsTopLeft, title: "Alu", href: "/san-pham/alu", subtitle: "Tấm ốp nhôm nhựa thẩm mỹ, bền ngoài trời" },
+  { icon: Square, title: "Tấm Nhựa Poly", href: "/san-pham/tam-nhua-poly", subtitle: "Lấy sáng, bền, dùng cho mái che và giếng trời" },
 
-  { icon: Bolt, title: "Phụ Kiện", subtitle: "Vít bắn tôn, keo, phụ kiện lắp đặt" },
+  { icon: Bolt, title: "Phụ Kiện", href: "/san-pham/phu-kien-ton-thep", subtitle: "Vít bắn tôn, keo, phụ kiện lắp đặt" },
 ];
 
 const STATS = [
