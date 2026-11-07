@@ -55,13 +55,18 @@ export function Header({ onLogoClick, onVintageClick }: HeaderProps) {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-3">
           {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer rounded-md border border-amber-200 overflow-hidden" onClick={onLogoClick}>
+          <Link
+            href="/home"
+            onClick={onLogoClick}
+            aria-label="Tâm Đức Cường - Trang chủ"
+            className="flex items-center gap-3 cursor-pointer rounded-md border border-amber-200 overflow-hidden"
+          >
             <img
               src="/images/logo.png"
               alt="Tâm Đức Cường"
               className="h-14 md:h-20 w-auto"
             />
-          </div>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
