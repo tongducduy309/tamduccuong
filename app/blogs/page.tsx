@@ -136,6 +136,7 @@ export default function BlogsPage() {
                           src={p.cover}
                           alt={p.title}
                           fill
+                          unoptimized
                           className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                         />
                       ) : (
