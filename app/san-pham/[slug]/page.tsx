@@ -46,8 +46,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     description: product.description,
     category: "Vật liệu xây dựng",
     url: productUrl,
-    brand: { "@type": "Brand", name: "Tâm Đức Cường" },
-    manufacturer: { "@type": "Organization", name: "Nhà máy tôn thép Tâm Đức Cường", url: SITE_URL },
   };
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: product.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
   const breadcrumb = {
