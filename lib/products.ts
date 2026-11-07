@@ -7,6 +7,10 @@ export type ProductInfo = {
   selectionPoints: string[];
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
+  buyingGuide: string[];
+  quoteChecklist: string[];
+  localSearchIntro: string;
+  relatedArticles: string[];
 };
 
 export const products: ProductInfo[] = [
@@ -154,6 +158,193 @@ export const products: ProductInfo[] = [
     relatedSlugs: ["ton-lanh-ton-kem", "ton-mau"]
   }
 ];
+
+
+const productEditorial: Record<string, Pick<ProductInfo, "buyingGuide" | "quoteChecklist" | "localSearchIntro" | "relatedArticles">> = {
+  "ton-lanh-ton-kem": {
+    "buyingGuide": [
+      "Phân biệt tôn lạnh mạ hợp kim nhôm-kẽm và tôn mạ kẽm; yêu cầu ghi rõ dòng hàng trên báo giá.",
+      "Đối chiếu BMT (độ dày thép nền), khổ hữu dụng, biên dạng sóng, lớp mạ và dung sai; không chỉ nhìn độ dày tổng.",
+      "Tính chiều dài tấm theo hướng thoát nước, độ dốc và phương án vận chuyển; kiểm tra phụ kiện úp nóc, diềm và vít tương thích."
+    ],
+    "quoteChecklist": [
+      "Tôn lạnh hay tôn kẽm; dạng cuộn hay tấm cán sóng",
+      "BMT, khổ hữu dụng, biên dạng và chiều dài từng tấm",
+      "Màu sắc/lớp phủ và tài liệu kỹ thuật cần đối chiếu",
+      "Số lượng, địa chỉ giao nhận và yêu cầu bốc dỡ"
+    ],
+    "localSearchIntro": "Khách hàng tìm mua tôn lạnh hoặc tôn kẽm tại Hiệp Phước, TP.HCM có thể gửi quy cách mái, chiều dài tấm và số lượng để Tâm Đức Cường kiểm tra phương án cung ứng, gia công và báo giá theo yêu cầu.",
+    "relatedArticles": [
+      "cach-chon-ton-lop-mai-nha-phu-hop",
+      "ton-lanh-va-ton-pu-nen-chon-loai-nao"
+    ]
+  },
+  "ton-mau": {
+    "buyingGuide": [
+      "Chọn dòng tôn và mã màu theo bảng màu thực tế; màu hiển thị trên màn hình có thể khác màu sản phẩm.",
+      "Kiểm tra BMT, lớp mạ, hệ sơn, khổ hữu dụng và biên dạng sóng theo môi trường sử dụng.",
+      "Xác nhận chiều dài, hướng lợp, phụ kiện đồng màu nếu có và cách bảo quản tránh trầy xước lớp sơn."
+    ],
+    "quoteChecklist": [
+      "Mã màu hoặc mẫu màu mong muốn",
+      "BMT, khổ, biên dạng sóng và chiều dài tấm",
+      "Số lượng và mục đích dùng cho mái hay vách",
+      "Địa chỉ giao hàng và thời gian dự kiến"
+    ],
+    "localSearchIntro": "Nếu cần tìm tôn màu tại Hiệp Phước, TP.HCM, hãy chuẩn bị mã màu, quy cách và kích thước mái. Tâm Đức Cường sẽ tiếp nhận yêu cầu để kiểm tra dòng hàng và khả năng đáp ứng trước khi xác nhận.",
+    "relatedArticles": [
+      "cach-chon-ton-lop-mai-nha-phu-hop"
+    ]
+  },
+  "thep-hop": {
+    "buyingGuide": [
+      "Chọn tiết diện vuông hay chữ nhật theo bản vẽ; không thay đổi kích thước hoặc chiều dày cấu kiện chịu lực khi chưa được kỹ sư chấp thuận.",
+      "Ghi rõ kích thước ngoài, chiều dày thép nền, chiều dài cây, mác thép và loại bề mặt đen/mạ kẽm.",
+      "So sánh báo giá theo cùng quy cách, dung sai, chứng từ và điều kiện giao nhận; làm rõ cách tính cây, kg hoặc tấn."
+    ],
+    "quoteChecklist": [
+      "Thép hộp vuông hay chữ nhật; kích thước hai cạnh",
+      "Chiều dày, chiều dài cây và số lượng",
+      "Thép đen hay mạ kẽm; mác/tiêu chuẩn nếu có",
+      "Địa chỉ giao nhận và yêu cầu chứng từ"
+    ],
+    "localSearchIntro": "Đối với nhu cầu mua thép hộp tại Hiệp Phước, TP.HCM, nên gửi bảng thống kê vật tư hoặc danh sách kích thước, chiều dày và số cây để đối chiếu đúng quy cách.",
+    "relatedArticles": []
+  },
+  "thep-hinh": {
+    "buyingGuide": [
+      "Xác định đúng tiết diện I, H, U hoặc V và quy cách theo bản vẽ kết cấu.",
+      "Kiểm tra kích thước, chiều dày cánh/bụng, chiều dài, mác thép, tiêu chuẩn và chứng từ đi kèm.",
+      "Không tự ý thay thế thép hình khác quy cách vì khả năng chịu lực phụ thuộc đặc tính tiết diện và tính toán thiết kế."
+    ],
+    "quoteChecklist": [
+      "Loại thép hình I/H/U/V và quy cách đầy đủ",
+      "Chiều dài từng cây và số lượng",
+      "Mác thép, tiêu chuẩn hoặc chứng từ yêu cầu",
+      "Địa điểm công trình, phương án xe giao và bốc dỡ"
+    ],
+    "localSearchIntro": "Nhà thầu cần tìm thép hình I, H, U, V tại Hiệp Phước, TP.HCM nên gửi đúng ký hiệu quy cách, chiều dài và số lượng theo bản vẽ để kiểm tra khả năng cung ứng và phương án vận chuyển.",
+    "relatedArticles": []
+  },
+  "xa-go-c-z": {
+    "buyingGuide": [
+      "Chọn tiết diện C hay Z theo sơ đồ kết cấu, nhịp, tải trọng và chi tiết liên kết; không chọn chỉ theo tên gọi.",
+      "Cung cấp chiều cao bụng, cánh, mép tăng cứng, chiều dày thép nền, lớp phủ và chiều dài thanh.",
+      "Với hệ nhiều nhịp hoặc nối chồng, phải theo chi tiết thiết kế; không tự quyết định chiều dài nối hoặc số lượng bu lông."
+    ],
+    "quoteChecklist": [
+      "Xà gồ C hay Z và kích thước tiết diện",
+      "Chiều dày, mác thép/lớp mạ và chiều dài thanh",
+      "Số lượng theo từng chiều dài; bản vẽ hoặc bảng thống kê",
+      "Địa chỉ công trình và yêu cầu xe giao"
+    ],
+    "localSearchIntro": "Công trình tại Hiệp Phước và TP.HCM cần xà gồ C/Z nên chuẩn bị bản vẽ mái, tiết diện, chiều dày và chiều dài từng thanh. Tâm Đức Cường có thể tiếp nhận thông tin để kiểm tra quy cách và báo giá theo danh mục thực tế.",
+    "relatedArticles": [
+      "xa-go-c-z-khac-nhau-the-nao"
+    ]
+  },
+  "ton-pu-cach-nhiet": {
+    "buyingGuide": [
+      "Tách bạch độ dày tôn bề mặt và độ dày lõi PU; yêu cầu thể hiện riêng trên báo giá.",
+      "Làm rõ cấu tạo mặt dưới, khổ hữu dụng, kiểu mối nối, chiều dài tấm và phụ kiện đồng bộ.",
+      "Yêu cầu tài liệu kỹ thuật về cách nhiệt, khả năng chống cháy và bảo hành của đúng mã sản phẩm; không suy đoán từ tên PU."
+    ],
+    "quoteChecklist": [
+      "Cấu tạo tấm và độ dày tôn bề mặt",
+      "Độ dày lõi PU và vật liệu mặt dưới",
+      "Khổ hữu dụng, chiều dài, màu sắc và số lượng",
+      "Yêu cầu kỹ thuật, chứng từ và địa chỉ giao"
+    ],
+    "localSearchIntro": "Khi tìm tôn PU cách nhiệt tại Hiệp Phước, TP.HCM, hãy gửi diện tích mái, cấu tạo mong muốn, độ dày lõi và chiều dài tấm. Thông số cần được xác nhận theo đúng sản phẩm trước khi đặt hàng.",
+    "relatedArticles": [
+      "ton-lanh-va-ton-pu-nen-chon-loai-nao",
+      "cach-chon-ton-lop-mai-nha-phu-hop"
+    ]
+  },
+  "panel-pu-eps": {
+    "buyingGuide": [
+      "Xác định panel dùng làm vách, trần hay khoang cần kiểm soát nhiệt; chọn lõi PU/EPS theo yêu cầu thiết kế.",
+      "Đối chiếu độ dày lõi, hai bề mặt, khổ hữu dụng, kiểu ngàm và phụ kiện hoàn thiện.",
+      "Kiểm tra hồ sơ kỹ thuật, yêu cầu vệ sinh, tải trọng và an toàn cháy của đúng mã panel; không xem PU/EPS là thông số chống cháy mặc định."
+    ],
+    "quoteChecklist": [
+      "Panel PU hay EPS; ứng dụng vách/trần",
+      "Độ dày lõi, bề mặt và khổ hữu dụng",
+      "Chiều dài, kiểu ngàm, phụ kiện và số lượng",
+      "Yêu cầu kỹ thuật, địa chỉ công trình và lịch nhận"
+    ],
+    "localSearchIntro": "Đơn vị thi công cần panel PU/EPS tại Hiệp Phước, TP.HCM nên gửi mục đích sử dụng, độ dày lõi, kích thước tấm và bản vẽ bố trí để đối chiếu đúng loại panel.",
+    "relatedArticles": [
+      "ton-lanh-va-ton-pu-nen-chon-loai-nao"
+    ]
+  },
+  "uon-vom-nhan-mang": {
+    "buyingGuide": [
+      "Chuẩn bị bản vẽ mặt cắt, bán kính uốn hoặc kích thước máng; ảnh hiện trạng giúp làm rõ vị trí lắp.",
+      "Ghi rõ vật liệu đầu vào, chiều dày, lớp phủ, chiều dài chi tiết và dung sai cần đạt.",
+      "Xác nhận khả năng gia công, số lượng, đóng gói và vận chuyển trước khi chốt tiến độ."
+    ],
+    "quoteChecklist": [
+      "Bản vẽ/mặt cắt, bán kính uốn hoặc kích thước máng",
+      "Loại tôn, chiều dày và lớp phủ",
+      "Chiều dài, số lượng và dung sai",
+      "Ảnh công trình, địa chỉ nhận và thời gian cần hàng"
+    ],
+    "localSearchIntro": "Khách hàng cần gia công uốn vòm hoặc nhấn máng tại Hiệp Phước, TP.HCM có thể gửi bản vẽ, kích thước và vật liệu để kiểm tra khả năng thực hiện trước khi xác nhận.",
+    "relatedArticles": [
+      "cach-chon-ton-lop-mai-nha-phu-hop"
+    ]
+  },
+  "alu": {
+    "buyingGuide": [
+      "Xác định tấm Alu dùng trong nhà hay ngoài trời; điều kiện nắng mưa và yêu cầu công trình ảnh hưởng lựa chọn lớp phủ.",
+      "Kiểm tra độ dày tổng, độ dày nhôm, loại lõi, lớp sơn, màu sắc và chứng từ kỹ thuật.",
+      "Với mặt dựng hoặc khu vực yêu cầu chống cháy, cần hồ sơ phân loại và phê duyệt đúng hệ vật liệu."
+    ],
+    "quoteChecklist": [
+      "Dòng Alu trong nhà/ngoài trời và màu sắc",
+      "Độ dày tổng, lớp nhôm và loại lõi",
+      "Khổ tấm, số lượng và phương án gia công",
+      "Yêu cầu kỹ thuật, địa chỉ giao hàng"
+    ],
+    "localSearchIntro": "Nếu tìm mua tấm Alu tại Hiệp Phước, TP.HCM, hãy nêu rõ vị trí sử dụng, màu sắc, độ dày và yêu cầu lõi để kiểm tra đúng dòng sản phẩm.",
+    "relatedArticles": []
+  },
+  "tam-nhua-poly": {
+    "buyingGuide": [
+      "Chọn tấm Poly đặc hay rỗng theo nhu cầu lấy sáng, độ cứng, cách nhiệt và nhịp đỡ.",
+      "Kiểm tra độ dày, màu, lớp chống UV, khổ tấm và hướng lắp đặt theo hướng dẫn nhà sản xuất.",
+      "Tính khe co giãn, vít, nẹp và phụ kiện tương thích; không siết vít làm biến dạng tấm."
+    ],
+    "quoteChecklist": [
+      "Tấm Poly đặc hay rỗng; màu sắc",
+      "Độ dày, khổ và chiều dài",
+      "Yêu cầu lớp chống UV và phụ kiện",
+      "Số lượng, vị trí giao và bản vẽ nếu có"
+    ],
+    "localSearchIntro": "Công trình cần tấm Poly lấy sáng tại Hiệp Phước, TP.HCM nên cung cấp loại tấm, độ dày, màu và kích thước mái che để kiểm tra quy cách phù hợp.",
+    "relatedArticles": []
+  },
+  "phu-kien-ton-thep": {
+    "buyingGuide": [
+      "Chọn vít theo vật liệu xà gồ, chiều dài xuyên qua các lớp liên kết và môi trường sử dụng.",
+      "Kiểm tra long đền, lớp phủ chống ăn mòn, loại keo và độ tương thích với bề mặt cần trám.",
+      "Đối chiếu phụ kiện với cấu tạo mái, diềm, úp nóc, máng xối và vị trí xuyên mái."
+    ],
+    "quoteChecklist": [
+      "Tên phụ kiện và mục đích sử dụng",
+      "Kích thước, vật liệu hoặc mã hàng nếu có",
+      "Số lượng và loại mái/vách đang thi công",
+      "Địa chỉ giao hàng và thời gian cần"
+    ],
+    "localSearchIntro": "Để hỏi mua phụ kiện tôn thép tại Hiệp Phước, TP.HCM, hãy gửi hình ảnh hoặc tên phụ kiện, kích thước và số lượng để đối chiếu đúng loại.",
+    "relatedArticles": [
+      "cach-chon-ton-lop-mai-nha-phu-hop"
+    ]
+  }
+};
+
+for (const product of products) Object.assign(product, productEditorial[product.slug]);
 
 export function getProductBySlug(slug: string): ProductInfo | undefined {
   return products.find((product) => product.slug === slug);
