@@ -1,18 +1,17 @@
 ---
 title: "Tôn lạnh và tôn PU cách nhiệt: Nên chọn loại nào cho công trình?"
-date: "2026-11-08"
+date: "2026-12-08"
 excerpt: "Tìm hiểu điểm khác nhau giữa tôn lạnh một lớp và tôn PU cách nhiệt, ưu nhược điểm, ứng dụng và các thông số cần so sánh trước khi chọn mua."
 tags: ["Tôn lạnh", "Tôn PU", "Tôn cách nhiệt", "Chống nóng mái nhà"]
-cover: "https://amcsteel.vn/image/upload/catalog/du-an/nam-2021/ducksan-quang-nam/nha-xuong-ducksan-quang-nam-1-1140x700.jpg"
+cover: "/images/blog/ton-pu-cach-nhiet-ai.svg"
 ---
 
 # Tôn lạnh và tôn PU cách nhiệt: Nên chọn loại nào cho công trình?
 
 Khi làm mái nhà hoặc nhà xưởng, nhiều người phân vân giữa tôn lạnh một lớp và tôn PU cách nhiệt. Hai loại vật liệu có cấu tạo, chi phí và mục đích sử dụng khác nhau. Chọn đúng loại cần bắt đầu từ điều kiện bên dưới mái, mức độ sử dụng không gian và yêu cầu của công trình.
 
-![Nhà xưởng sử dụng mái tôn kim loại](https://amcsteel.vn/image/upload/catalog/du-an/nam-2021/ducksan-quang-nam/nha-xuong-ducksan-quang-nam-1-1140x700.jpg)
+![Nhà xưởng sử dụng mái tôn kim loại](/images/blog/ton-pu-cach-nhiet-ai.svg)
 
-*Nguồn ảnh minh họa: [AMC Steel](https://amcsteel.vn/du-an-nha-xuong-cong-ty-ducksan-quang-nam.html).*
 
 ## 1. Tôn lạnh là gì?
 
