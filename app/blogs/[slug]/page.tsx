@@ -82,24 +82,30 @@ export default async function BlogDetailPage({
   try {
     const { frontmatter, contentHtml } = await getPostBySlug(slug);
 
+    const articleUrl = `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}`;
     const articleSchema = {
       "@context": "https://schema.org",
       "@type": "Article",
+      "@id": `${articleUrl}#article`,
       headline: frontmatter.title,
       description: frontmatter.excerpt || "Kiến thức về tôn, sắt thép và vật liệu xây dựng từ Tâm Đức Cường.",
-      datePublished: frontmatter.date,
-      dateModified: frontmatter.date,
+      datePublished: new Date(frontmatter.date).toISOString(),
+      dateModified: new Date(frontmatter.updatedAt || frontmatter.date).toISOString(),
       inLanguage: "vi-VN",
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id": `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}`
+      mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+      author: {
+        "@type": "Organization",
+        name: "Tâm Đức Cường",
+        url: "https://tamduccuong.vercel.app/about"
       },
       publisher: {
         "@type": "Organization",
         name: "Tâm Đức Cường",
         url: "https://tamduccuong.vercel.app"
       },
-      ...(frontmatter.cover ? { image: [frontmatter.cover] } : {})
+      ...(frontmatter.cover ? { image: [new URL(frontmatter.cover, "https://tamduccuong.vercel.app").toString()] } : {}),
+      ...(frontmatter.tags?.length ? { keywords: frontmatter.tags.join(", ") } : {}),
+      ...(frontmatter.readingMinutes ? { timeRequired: `PT${frontmatter.readingMinutes}M` } : {})
     };
 
     const breadcrumbSchema = {
