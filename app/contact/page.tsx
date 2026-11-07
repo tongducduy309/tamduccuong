@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     "nhamaytontheptamduccuong@gmail.com"
   ],
 
+  alternates: { canonical: "https://tamduccuong.vercel.app/contact" },
   openGraph: {
+    url: "https://tamduccuong.vercel.app/contact",
+    locale: "vi_VN",
+    siteName: "Tâm Đức Cường",
     title: "Liên hệ | Tâm Đức Cường",
     description:
       "Thông tin liên hệ chính thức của Tâm Đức Cường: số điện thoại, email, địa chỉ và giờ làm việc.",
