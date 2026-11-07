@@ -49,7 +49,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     brand: { "@type": "Brand", name: "Tâm Đức Cường" },
     manufacturer: { "@type": "Organization", name: "Nhà máy tôn thép Tâm Đức Cường", url: SITE_URL },
   };
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: product.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };\n  const breadcrumb = {
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: product.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
+  const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -85,7 +86,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <p className="mt-4 text-base leading-8 text-slate-700">{product.description}</p>
         </section>
 
-        <section className="mt-10"><h2 className="text-2xl font-bold text-zinc-900">Hướng dẫn chọn {product.name.toLowerCase()} phù hợp</h2><ol className="mt-5 grid gap-4 md:grid-cols-3">{product.buyingGuide.map((item, index) => <li key={item} className="rounded-2xl border bg-white p-5"><span className="text-sm font-bold text-amber-700">Bước {index + 1}</span><p className="mt-2 text-sm leading-7 text-slate-700">{item}</p></li>)}</ol></section>\n        <section className="mt-10 grid gap-8 md:grid-cols-2">
+        <section className="mt-10"><h2 className="text-2xl font-bold text-zinc-900">Hướng dẫn chọn {product.name.toLowerCase()} phù hợp</h2><ol className="mt-5 grid gap-4 md:grid-cols-3">{product.buyingGuide.map((item, index) => <li key={item} className="rounded-2xl border bg-white p-5"><span className="text-sm font-bold text-amber-700">Bước {index + 1}</span><p className="mt-2 text-sm leading-7 text-slate-700">{item}</p></li>)}</ol></section>
+        <section className="mt-10 grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border bg-white p-6">
             <h2 className="text-xl font-bold text-zinc-900">Ứng dụng phổ biến</h2>
             <ul className="mt-4 space-y-3">
