@@ -24,7 +24,7 @@ export type BlogPost = BlogFrontmatter & {
 
 function estimateReadingMinutes(content: string): number {
   const words = content
-    .replace(/![[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
     .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
     .replace(/[#>*`_~|-]/g, " ")
     .trim()
