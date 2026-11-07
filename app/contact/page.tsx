@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Liên hệ Tâm Đức Cường tại Hiệp Phước, TP.HCM",
+    default: "Liên hệ tại Hiệp Phước, TP.HCM",
     template: "%s | Tâm Đức Cường",
   },
   description:
