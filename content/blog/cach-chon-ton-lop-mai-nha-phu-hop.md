@@ -12,7 +12,9 @@ Tôn lợp mái có nhiều loại, kiểu sóng, màu sắc và quy cách khác
 
 Bài viết này tổng hợp 7 tiêu chí nên kiểm tra trước khi đặt mua tôn cho nhà ở, mái hiên, nhà kho hoặc nhà xưởng.
 
-![Mái nhà xưởng sử dụng tôn lợp kim loại] (https://sangchinhsteel.vn/thumbs/800x800x2/upload/news/ton-lop-nha-xuong-top-mau-re-dep-nhat-6100.jpg)
+![Mái nhà xưởng sử dụng tôn lợp kim loại](https://sangchinhsteel.vn/thumbs/800x800x2/upload/news/ton-lop-nha-xuong-top-mau-re-dep-nhat-6100.jpg)
+
+*Nguồn ảnh minh họa: [sangchinhsteel.vn](https://sangchinhsteel.vn/ton-lop-nha-xuong-top-mau-re-dep-nhat/).*
 
 ## 1. Xác định đúng mục đích sử dụng
 
