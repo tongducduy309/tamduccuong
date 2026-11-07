@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/home`, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/blogs`, changeFrequency: "daily", priority: 0.9 },
-    { url: `${BASE_URL}/san-pham`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/san-pham`, changeFrequency: "weekly", priority: 0.9 },\n    { url: `${BASE_URL}/vat-lieu-xay-dung-hiep-phuoc`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/quotation`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/contact`, changeFrequency: "monthly", priority: 0.8 },
   ];
