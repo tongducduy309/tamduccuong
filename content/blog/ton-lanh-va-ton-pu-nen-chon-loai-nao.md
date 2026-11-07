@@ -10,7 +10,9 @@ cover: "https://amcsteel.vn/image/upload/catalog/du-an/nam-2021/ducksan-quang-na
 
 Khi làm mái nhà hoặc nhà xưởng, nhiều người phân vân giữa tôn lạnh một lớp và tôn PU cách nhiệt. Hai loại vật liệu có cấu tạo, chi phí và mục đích sử dụng khác nhau. Chọn đúng loại cần bắt đầu từ điều kiện bên dưới mái, mức độ sử dụng không gian và yêu cầu của công trình.
 
-![Nhà xưởng sử dụng mái tôn kim loại] (https://amcsteel.vn/image/upload/catalog/du-an/nam-2021/ducksan-quang-nam/nha-xuong-ducksan-quang-nam-1-1140x700.jpg)
+![Nhà xưởng sử dụng mái tôn kim loại](https://amcsteel.vn/image/upload/catalog/du-an/nam-2021/ducksan-quang-nam/nha-xuong-ducksan-quang-nam-1-1140x700.jpg)
+
+*Nguồn ảnh minh họa: [AMC Steel](https://amcsteel.vn/du-an-nha-xuong-cong-ty-ducksan-quang-nam.html).*
 
 ## 1. Tôn lạnh là gì?
 
