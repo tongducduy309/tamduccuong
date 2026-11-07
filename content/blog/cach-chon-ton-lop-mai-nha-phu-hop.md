@@ -3,6 +3,7 @@ title: "Cách chọn tôn lợp mái phù hợp: 7 tiêu chí cần kiểm tra t
 date: "2026-11-08"
 excerpt: "Hướng dẫn chọn tôn lợp mái theo công năng, khả năng chống nóng, độ dày, lớp mạ, màu sắc và điều kiện thi công. Checklist thực tế dành cho nhà ở, mái hiên và nhà xưởng."
 tags: ["Tôn lợp mái", "Tôn lạnh", "Tôn cách nhiệt", "Kinh nghiệm xây dựng"]
+relatedProducts: ["ton-lanh-ton-kem","ton-mau","ton-pu-cach-nhiet","phu-kien-ton-thep"]
 cover: "/images/blog/ton-lop-mai-ai.svg"
 ---
 
@@ -120,3 +121,11 @@ Tôn Thép Tâm Đức Cường cung cấp các nhóm vật tư như tôn lạnh
 Tham khảo [trang liên hệ](/contact) hoặc [gửi yêu cầu báo giá](/quotation).
 
 *Lưu ý: Nội dung mang tính hướng dẫn tham khảo. Việc lựa chọn độ dày, kết cấu đỡ, liên kết và biện pháp thi công cần căn cứ bản vẽ, tải trọng, tiêu chuẩn áp dụng và tư vấn của người có chuyên môn.*
+
+
+## Sản phẩm liên quan tại Tâm Đức Cường
+
+- [ton lanh ton kem](/san-pham/ton-lanh-ton-kem)
+- [ton mau](/san-pham/ton-mau)
+- [ton pu cach nhiet](/san-pham/ton-pu-cach-nhiet)
+- [phu kien ton thep](/san-pham/phu-kien-ton-thep)
