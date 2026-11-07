@@ -34,7 +34,7 @@ function estimateReadingMinutes(content: string): number {
   return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
 }
 
-function toOptionalString(value: unknown): string | undefined {
+function isPublished(dateValue: string): boolean {\n  const todayInVietnam = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh" }).format(new Date());\n  return /^\\d{4}-\\d{2}-\\d{2}$/.test(dateValue) ? dateValue <= todayInVietnam : new Date(dateValue).getTime() <= Date.now();\n}\n\nfunction toOptionalString(value: unknown): string | undefined {
   return typeof value === "string" && value.trim() ? value.trim() : undefined;
 }
 
@@ -99,7 +99,7 @@ export async function getPostBySlug(slug: string) {
   const processed = await remark()
     .use(gfm)
     .use(html, { sanitize: true })
-    .process(content);
+    .process(normalizedContent);
 
   return {
     frontmatter: {
