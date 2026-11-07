@@ -7,10 +7,10 @@ export type ProductInfo = {
   selectionPoints: string[];
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
-  buyingGuide: string[];
-  quoteChecklist: string[];
-  localSearchIntro: string;
-  relatedArticles: string[];
+  buyingGuide?: string[];
+  quoteChecklist?: string[];
+  localSearchIntro?: string;
+  relatedArticles?: string[];
 };
 
 export const products: ProductInfo[] = [
