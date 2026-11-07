@@ -15,13 +15,10 @@ export function CategoryCard({
   icon: Icon,
   title,
   subtitle,
-  onClick,
   delay = 0,
 }: CategoryCardProps) {
   return (
-    <motion.button
-      type="button"
-      onClick={onClick}
+    <motion.div
       initial={{ opacity: 0, y: 30, scale: 0.96 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -91,6 +88,6 @@ export function CategoryCard({
 
         
       </motion.div>
-    </motion.button>
+    </motion.div>
   );
 }
