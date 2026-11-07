@@ -17,6 +17,7 @@ const NAV = [
   { href: "/home", label: "Trang chủ" },
   { href: "/about", label: "Về chúng tôi" },
   { href: "/san-pham", label: "Sản phẩm" },
+  { href: "/vat-lieu-xay-dung-hiep-phuoc", label: "Khu vực" },
   { href: "/contact", label: "Liên hệ" },
   { href: "/quotation", label: "Bảng báo giá" },
   { href: "/blogs", label: "Bài viết" },
@@ -36,6 +37,7 @@ export function Header({ onLogoClick, onVintageClick }: HeaderProps) {
     // active cho /blogs và /blogs/slug
     if (href === "/blogs") return pathname === "/blogs" || pathname.startsWith("/blogs/");
     if (href === "/san-pham") return pathname === "/san-pham" || pathname.startsWith("/san-pham/");
+    if (href === "/vat-lieu-xay-dung-hiep-phuoc") return pathname === href;
     return pathname === href;
   };
 
