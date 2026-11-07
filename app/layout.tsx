@@ -123,7 +123,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${balooBhai2.variable} ${phudu.variable}`}>
+    <html lang="vi" className={`${balooBhai2.variable} ${phudu.variable}`}>
       <head>
         <meta name="google-site-verification" content="7lf1VdNiAhsfiklzsWWWOtWtMAFNWrsOMFIu0LtRuwk" />
       </head>
