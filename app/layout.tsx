@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Baloo_Bhai_2, Phudu } from 'next/font/google';
 import "./globals.css";
+import { NavigationProgress } from "@/lib/components/NavigationProgress";
 
 
 const balooBhai2 = Baloo_Bhai_2({
@@ -130,6 +131,7 @@ export default function RootLayout({
       <body
         className={`${balooBhai2.variable} ${phudu.variable}`}
       >
+        <NavigationProgress />
         {children}
       </body>
     </html>
