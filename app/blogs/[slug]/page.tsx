@@ -182,6 +182,7 @@ export default async function BlogDetailPage({
                       alt={frontmatter.title}
                       fill
                       priority
+                      unoptimized
                       className="object-cover"
                     />
                   </div>
