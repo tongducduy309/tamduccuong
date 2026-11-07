@@ -80,7 +80,7 @@ export default async function BlogDetailPage({
   if (!slug) notFound();
 
   try {
-    const { frontmatter, contentHtml } = await getPostBySlug(slug);
+    const { frontmatter, contentHtml } = await getPostBySlug(slug);\n    const { getProductBySlug } = await import("@/lib/products");\n    const relatedProducts = (frontmatter.relatedProducts ?? []).map((productSlug) => getProductBySlug(productSlug)).filter(Boolean);
 
     const articleUrl = `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}`;
     const articleSchema = {
