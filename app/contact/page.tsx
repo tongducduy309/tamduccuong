@@ -5,11 +5,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Liên hệ",
+    default: "Liên hệ Tâm Đức Cường tại Hiệp Phước, TP.HCM",
     template: "%s | Tâm Đức Cường",
   },
   description:
-    "Liên hệ Tâm Đức Cường – hỗ trợ nhanh chóng qua điện thoại, email. Địa chỉ rõ ràng, giờ làm việc linh hoạt.",
+    "Liên hệ Tâm Đức Cường tại 413 Nguyễn Văn Tạo, Xã Hiệp Phước, TP.HCM qua điện thoại hoặc email để hỏi thông tin sản phẩm, quy cách và báo giá.",
 
   keywords: [
     "Tâm Đức Cường",
