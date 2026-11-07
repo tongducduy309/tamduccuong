@@ -62,6 +62,7 @@ export default function ProductsPage() {
             </Link>
           ))}
         </div>
+        <div className="mt-8 rounded-2xl border bg-white p-6"><h2 className="text-xl font-bold text-zinc-900">Tìm vật liệu xây dựng tại Hiệp Phước?</h2><p className="mt-2 text-sm leading-7 text-slate-600">Xem địa chỉ, thông tin liên hệ và cách gửi yêu cầu báo giá cho công trình tại Hiệp Phước, TP.HCM.</p><Link href="/vat-lieu-xay-dung-hiep-phuoc" className="mt-4 inline-flex items-center text-sm font-semibold text-amber-700">Thông tin khu vực <ArrowRight className="ml-2 h-4 w-4" /></Link></div>
         <div className="mt-12 rounded-2xl bg-zinc-900 p-7 text-white md:p-9">
           <h2 className="text-2xl font-bold">Cần tư vấn quy cách hoặc báo giá?</h2>
           <p className="mt-2 max-w-2xl text-sm leading-7 text-white/75">Gửi loại vật liệu, kích thước, số lượng và địa điểm giao hàng để Tâm Đức Cường kiểm tra khả năng cung ứng và phản hồi.</p>
