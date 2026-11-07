@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Tâm Đức Cường chuyên cung cấp tôn, sắt, thép, xà gồ và vật liệu xây dựng tại khu vực Nhà Bè. Uy tín – giá tốt – giao hàng nhanh tận công trình.",
 
   alternates: {
-    canonical: "https://tamduccuong.vercel.app/ve-chung-toi",
+    canonical: "https://tamduccuong.vercel.app/about",
   },
 
   robots: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    url: "https://tamduccuong.vercel.app/ve-chung-toi",
+    url: "https://tamduccuong.vercel.app/about",
     title: "Về chúng tôi – Vật liệu xây dựng Nhà Bè, Hồ Chí Minh",
     description:
       "Giới thiệu Tâm Đức Cường – đơn vị cung cấp tôn, sắt, thép, xà gồ, vật liệu xây dựng uy tín tại Nhà Bè, Hồ Chí Minh.",
