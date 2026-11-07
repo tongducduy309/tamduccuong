@@ -20,9 +20,9 @@ const phudu = Phudu({
 const siteName = "Tâm Đức Cường - Vật liệu xây dựng";
 const siteUrl = "https://tamduccuong.vercel.app";
 
-const defaultTitle = "Tôn, Sắt, Thép, Xà gồ | Báo giá & Giao hàng nhanh";
+const defaultTitle = "Tôn, sắt thép, xà gồ tại Nhà Bè | Tâm Đức Cường";
 const defaultDescription =
-  "Chuyên cung cấp tôn lợp, sắt thép xây dựng, xà gồ, phụ kiện, vật tư công trình. Báo giá nhanh, hàng chuẩn chất lượng, giao hàng tận nơi.";
+  "Tâm Đức Cường cung cấp tôn lợp, tôn màu, sắt thép, thép hộp, xà gồ và vật tư xây dựng tại Nhà Bè, TP.HCM. Tư vấn quy cách, báo giá và giao hàng công trình.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -51,7 +51,12 @@ export const metadata: Metadata = {
     "báo giá thép",
     "giao hàng vật liệu xây dựng",
     "nhà máy tôn",
-    "nhà máy tôn thép"
+    "nhà máy tôn thép",
+    "tôn thép Nhà Bè",
+    "vật liệu xây dựng Nhà Bè",
+    "sắt thép Nhà Bè",
+    "xà gồ Nhà Bè",
+    "tôn lợp TP.HCM"
   ],
 
   applicationName: siteName,
@@ -131,6 +136,55 @@ export default function RootLayout({
       <body
         className={`${balooBhai2.variable} ${phudu.variable}`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "HomeAndConstructionBusiness",
+                  "@id": "https://tamduccuong.vercel.app/#business",
+                  name: "Nhà máy tôn thép Tâm Đức Cường",
+                  alternateName: "Tâm Đức Cường",
+                  url: "https://tamduccuong.vercel.app",
+                  description: "Cung cấp tôn lợp, tôn màu, sắt thép, thép hộp, thép hình, xà gồ, panel, phụ kiện và gia công vật tư xây dựng tại Nhà Bè, TP.HCM.",
+                  telephone: ["+84933770378", "+84918279361"],
+                  email: "nhamaytontheptamduccuong@gmail.com",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "413 Đường Nguyễn Văn Tạo",
+                    addressLocality: "Hiệp Phước",
+                    addressRegion: "Thành phố Hồ Chí Minh",
+                    addressCountry: "VN"
+                  },
+                  areaServed: [
+                    { "@type": "Place", name: "Nhà Bè, Thành phố Hồ Chí Minh" },
+                    { "@type": "City", name: "Thành phố Hồ Chí Minh" }
+                  ],
+                  knowsAbout: [
+                    "Tôn lạnh và tôn kẽm",
+                    "Tôn màu",
+                    "Thép hộp và thép hình",
+                    "Xà gồ C và Z",
+                    "Tấm panel PU và EPS",
+                    "Tôn PU cách nhiệt",
+                    "Phụ kiện tôn thép",
+                    "Gia công uốn vòm và nhấn máng"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://tamduccuong.vercel.app/#website",
+                  url: "https://tamduccuong.vercel.app",
+                  name: "Tâm Đức Cường",
+                  inLanguage: "vi-VN",
+                  publisher: { "@id": "https://tamduccuong.vercel.app/#business" }
+                }
+              ]
+            }).replace(/</g, "\\u003c")
+          }}
+        />
         <NavigationProgress />
         {children}
       </body>
