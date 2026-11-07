@@ -3,6 +3,7 @@ title: "Xà gồ C và xà gồ Z khác nhau thế nào? Cách chọn cho mái n
 date: "2026-11-23"
 excerpt: "So sánh xà gồ C và Z về hình dạng, cách bố trí, nối chồng và ứng dụng. Những thông tin cần chuẩn bị để chọn đúng quy cách xà gồ cho mái và vách nhà xưởng."
 tags: ["Xà gồ C", "Xà gồ Z", "Thép nhà xưởng", "Kết cấu mái"]
+relatedProducts: ["xa-go-c-z","thep-hinh","ton-lanh-ton-kem"]
 cover: "/images/blog/xa-go-c-z-ai.svg"
 ---
 
@@ -108,3 +109,10 @@ Tâm Đức Cường cung cấp các nhóm vật tư tôn thép, thép hộp, th
 Xem [thông tin liên hệ](/contact) hoặc [yêu cầu báo giá](/quotation).
 
 *Lưu ý: Bài viết chỉ cung cấp kiến thức nhận biết và lựa chọn sơ bộ. Kích thước, chiều dày, khoảng cách và liên kết xà gồ phải được xác định theo tính toán kết cấu và hồ sơ thiết kế được duyệt.*
+
+
+## Sản phẩm liên quan tại Tâm Đức Cường
+
+- [xa go c z](/san-pham/xa-go-c-z)
+- [thep hinh](/san-pham/thep-hinh)
+- [ton lanh ton kem](/san-pham/ton-lanh-ton-kem)
