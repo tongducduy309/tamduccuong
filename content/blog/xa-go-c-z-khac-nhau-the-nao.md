@@ -1,18 +1,17 @@
 ---
 title: "Xà gồ C và xà gồ Z khác nhau thế nào? Cách chọn cho mái nhà xưởng"
-date: "2026-11-08"
+date: "2026-11-23"
 excerpt: "So sánh xà gồ C và Z về hình dạng, cách bố trí, nối chồng và ứng dụng. Những thông tin cần chuẩn bị để chọn đúng quy cách xà gồ cho mái và vách nhà xưởng."
 tags: ["Xà gồ C", "Xà gồ Z", "Thép nhà xưởng", "Kết cấu mái"]
-cover: "https://www.apexmetalsroofing.com/_astro/product_purlins.D_4jQMRM_Ac9HM.webp"
+cover: "/images/blog/xa-go-c-z-ai.svg"
 ---
 
 # Xà gồ C và xà gồ Z khác nhau thế nào? Cách chọn cho mái nhà xưởng
 
 Xà gồ là cấu kiện quan trọng trong hệ mái và vách của nhiều công trình nhà thép. Trên thị trường, hai dạng phổ biến là xà gồ C và xà gồ Z. Nhìn qua chúng có thể khá giống nhau, nhưng hình dạng tiết diện và cách bố trí tạo ra những khác biệt trong thiết kế, lắp dựng và nối liên tục.
 
-![Các bó xà gồ thép C và Z trong nhà kho](https://www.apexmetalsroofing.com/_astro/product_purlins.D_4jQMRM_Ac9HM.webp)
+![Các bó xà gồ thép C và Z trong nhà kho](/images/blog/xa-go-c-z-ai.svg)
 
-*Nguồn ảnh minh họa: [apexmetalsroofing.com](https://www.apexmetalsroofing.com/).*
 
 ## 1. Xà gồ C là gì?
 
