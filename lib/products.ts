@@ -344,7 +344,10 @@ const productEditorial: Record<string, Pick<ProductInfo, "buyingGuide" | "quoteC
   }
 };
 
-for (const product of products) {\n  Object.assign(product, productEditorial[product.slug]);\n  product.relatedArticles = product.relatedArticles.filter(Boolean);\n}
+for (const product of products) {
+  Object.assign(product, productEditorial[product.slug]);
+  product.relatedArticles = product.relatedArticles.filter(Boolean);
+}
 
 export function getProductBySlug(slug: string): ProductInfo | undefined {
   return products.find((product) => product.slug === slug);
