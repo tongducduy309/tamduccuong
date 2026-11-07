@@ -155,7 +155,17 @@ export default async function BlogDetailPage({
                   {frontmatter.date && (
                     <div className="inline-flex items-center gap-2 rounded-full border bg-white/80 px-4 py-2 text-sm text-muted-foreground shadow-sm">
                       <CalendarDays className="h-4 w-4 text-amber-700" />
-                      <span>{formatDate(frontmatter.date)}</span>
+                      <span>Đăng ngày {formatDate(frontmatter.date)}</span>
+                    </div>
+                  )}
+                  {frontmatter.updatedAt && frontmatter.updatedAt !== frontmatter.date && (
+                    <div className="inline-flex items-center gap-2 rounded-full border bg-white/80 px-4 py-2 text-sm text-muted-foreground shadow-sm">
+                      <span>Cập nhật {formatDate(frontmatter.updatedAt)}</span>
+                    </div>
+                  )}
+                  {frontmatter.readingMinutes && (
+                    <div className="inline-flex items-center rounded-full border bg-white/80 px-4 py-2 text-sm text-muted-foreground shadow-sm">
+                      Đọc trong {frontmatter.readingMinutes} phút
                     </div>
                   )}
 
