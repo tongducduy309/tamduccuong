@@ -104,7 +104,7 @@ export function CategoryListingPage({
   const activeFiltersCount =
     selectedConditions.length + (priceRange !== "all" ? 1 : 0);
 
-  const FilterPanel = () => (
+  const renderFilterPanel = () => (
     <div className="space-y-6">
       {/* Sort By */}
       <div>
@@ -235,7 +235,7 @@ export function CategoryListingPage({
                   </span>
                 )}
               </div>
-              <FilterPanel />
+              {renderFilterPanel()}
             </Card>
           </aside>
 
@@ -263,7 +263,7 @@ export function CategoryListingPage({
                     <SheetTitle>Filters</SheetTitle>
                   </SheetHeader>
                   <div className="mt-6">
-                    <FilterPanel />
+                    {renderFilterPanel()}
                   </div>
                 </SheetContent>
               </Sheet>
