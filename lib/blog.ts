@@ -58,26 +58,29 @@ export function getAllSlugs(): string[] {
 }
 
 export function getAllPosts(): BlogPost[] {
-  return getMarkdownFiles()
-    .map((file) => {
-      const slug = file.replace(/\.md$/, "");
-      const source = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
-      const { data, content } = matter(source);
-      const date = String(data.date ?? "1970-01-01");
-      if (!isPublished(date)) return null;
-      return {
-        slug,
-        title: String(data.title ?? slug),
-        date,
-        updatedAt: toOptionalString(data.updatedAt),
-        excerpt: toOptionalString(data.excerpt),
-        tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-        cover: toOptionalString(data.cover),
-        readingMinutes: Number(data.readingMinutes) > 0
-          ? Math.ceil(Number(data.readingMinutes))
-          : estimateReadingMinutes(content),
-      };
-    })
+  const posts: (BlogPost | null)[] = getMarkdownFiles().map((file): BlogPost | null => {
+    const slug = file.replace(/\.md$/, "");
+    const source = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
+    const { data, content } = matter(source);
+    const date = String(data.date ?? "1970-01-01");
+    if (!isPublished(date)) return null;
+
+    return {
+      slug,
+      title: String(data.title ?? slug),
+      date,
+      updatedAt: toOptionalString(data.updatedAt),
+      excerpt: toOptionalString(data.excerpt),
+      tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
+      cover: toOptionalString(data.cover),
+      relatedProducts: Array.isArray(data.relatedProducts) ? data.relatedProducts.map(String) : [],
+      readingMinutes: Number(data.readingMinutes) > 0
+        ? Math.ceil(Number(data.readingMinutes))
+        : estimateReadingMinutes(content),
+    };
+  });
+
+  return posts
     .filter((post): post is BlogPost => post !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
