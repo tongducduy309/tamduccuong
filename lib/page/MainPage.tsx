@@ -49,10 +49,10 @@ const categories = [
 ];
 
 const STATS = [
-  { label: "Năm kinh nghiệm", value: "20+" },
-  { label: "Đơn hàng / năm", value: "10K+" },
-  { label: "Kho hàng đa quy cách", value: "Sẵn" },
-  { label: "Hỗ trợ công trình", value: "Nhanh" },
+  { label: "Nhóm vật tư", value: "Đa dạng" },
+  { label: "Tư vấn", value: "Theo quy cách" },
+  { label: "Báo giá", value: "Theo yêu cầu" },
+  { label: "Hỗ trợ", value: "Công trình" },
 ];
 
 const VALUES = [
@@ -63,8 +63,8 @@ const VALUES = [
   },
   {
     icon: Truck,
-    title: "Giao nhanh tận nơi",
-    desc: "Chủ động lịch giao, hỗ trợ công trình và giảm thời gian chờ đợi.",
+    title: "Hỗ trợ giao nhận",
+    desc: "Trao đổi phương án vận chuyển theo chủng loại, số lượng và địa điểm công trình.",
   },
   {
     icon: Award,
@@ -186,8 +186,8 @@ export function MainPage() {
                   variants={fadeUp}
                   className="mt-5 max-w-xl text-base leading-8 text-muted-foreground md:text-lg"
                 >
-                  Cung cấp vật tư xây dựng với tiêu chí rõ ràng về quy cách, giá hợp lý,
-                  có sẵn hàng đa chủng loại và hỗ trợ giao tận công trình.
+                  Cung cấp nhiều nhóm vật tư xây dựng, tư vấn theo quy cách và tiếp nhận yêu cầu báo giá cho công trình.
+                  Phương án giao nhận được xác nhận theo mặt hàng và địa điểm thực tế.
                 </motion.p>
 
                 <motion.div
