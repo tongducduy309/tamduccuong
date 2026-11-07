@@ -176,7 +176,7 @@ const productEditorial: Record<string, Pick<ProductInfo, "buyingGuide" | "quoteC
     "localSearchIntro": "Khách hàng tìm mua tôn lạnh hoặc tôn kẽm tại Hiệp Phước, TP.HCM có thể gửi quy cách mái, chiều dài tấm và số lượng để Tâm Đức Cường kiểm tra phương án cung ứng, gia công và báo giá theo yêu cầu.",
     "relatedArticles": [
       "cach-chon-ton-lop-mai-nha-phu-hop",
-      "ton-lanh-va-ton-pu-nen-chon-loai-nao"
+      
     ]
   },
   "ton-mau": {
@@ -240,7 +240,7 @@ const productEditorial: Record<string, Pick<ProductInfo, "buyingGuide" | "quoteC
     ],
     "localSearchIntro": "Công trình tại Hiệp Phước và TP.HCM cần xà gồ C/Z nên chuẩn bị bản vẽ mái, tiết diện, chiều dày và chiều dài từng thanh. Tâm Đức Cường có thể tiếp nhận thông tin để kiểm tra quy cách và báo giá theo danh mục thực tế.",
     "relatedArticles": [
-      "xa-go-c-z-khac-nhau-the-nao"
+      
     ]
   },
   "ton-pu-cach-nhiet": {
@@ -257,7 +257,7 @@ const productEditorial: Record<string, Pick<ProductInfo, "buyingGuide" | "quoteC
     ],
     "localSearchIntro": "Khi tìm tôn PU cách nhiệt tại Hiệp Phước, TP.HCM, hãy gửi diện tích mái, cấu tạo mong muốn, độ dày lõi và chiều dài tấm. Thông số cần được xác nhận theo đúng sản phẩm trước khi đặt hàng.",
     "relatedArticles": [
-      "ton-lanh-va-ton-pu-nen-chon-loai-nao",
+      ,
       "cach-chon-ton-lop-mai-nha-phu-hop"
     ]
   },
@@ -275,7 +275,7 @@ const productEditorial: Record<string, Pick<ProductInfo, "buyingGuide" | "quoteC
     ],
     "localSearchIntro": "Đơn vị thi công cần panel PU/EPS tại Hiệp Phước, TP.HCM nên gửi mục đích sử dụng, độ dày lõi, kích thước tấm và bản vẽ bố trí để đối chiếu đúng loại panel.",
     "relatedArticles": [
-      "ton-lanh-va-ton-pu-nen-chon-loai-nao"
+      
     ]
   },
   "uon-vom-nhan-mang": {
