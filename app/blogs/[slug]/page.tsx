@@ -7,6 +7,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, CalendarDays, ArrowRight, Sparkles } from "lucide-react";
 
+function isPostNotFoundError(error: unknown): boolean {
+  return typeof error === "object" && error !== null && "code" in error && error.code === "POST_NOT_FOUND";
+}
+
 export async function generateMetadata({
   params,
 }: {
