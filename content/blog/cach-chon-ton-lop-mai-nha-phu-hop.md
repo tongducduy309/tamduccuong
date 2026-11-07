@@ -3,7 +3,7 @@ title: "Cách chọn tôn lợp mái phù hợp: 7 tiêu chí cần kiểm tra t
 date: "2026-11-08"
 excerpt: "Hướng dẫn chọn tôn lợp mái theo công năng, khả năng chống nóng, độ dày, lớp mạ, màu sắc và điều kiện thi công. Checklist thực tế dành cho nhà ở, mái hiên và nhà xưởng."
 tags: ["Tôn lợp mái", "Tôn lạnh", "Tôn cách nhiệt", "Kinh nghiệm xây dựng"]
-cover: "https://sangchinhsteel.vn/thumbs/800x800x2/upload/news/ton-lop-nha-xuong-top-mau-re-dep-nhat-6100.jpg"
+cover: "/images/blog/ton-lop-mai-ai.svg"
 ---
 
 # Cách chọn tôn lợp mái phù hợp: 7 tiêu chí cần kiểm tra trước khi mua
@@ -12,9 +12,8 @@ Tôn lợp mái có nhiều loại, kiểu sóng, màu sắc và quy cách khác
 
 Bài viết này tổng hợp 7 tiêu chí nên kiểm tra trước khi đặt mua tôn cho nhà ở, mái hiên, nhà kho hoặc nhà xưởng.
 
-![Mái nhà xưởng sử dụng tôn lợp kim loại](https://sangchinhsteel.vn/thumbs/800x800x2/upload/news/ton-lop-nha-xuong-top-mau-re-dep-nhat-6100.jpg)
+![Mái nhà xưởng sử dụng tôn lợp kim loại](/images/blog/ton-lop-mai-ai.svg)
 
-*Nguồn ảnh minh họa: [sangchinhsteel.vn](https://sangchinhsteel.vn/ton-lop-nha-xuong-top-mau-re-dep-nhat/).*
 
 ## 1. Xác định đúng mục đích sử dụng
 
