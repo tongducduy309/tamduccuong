@@ -47,6 +47,7 @@ export function NavigationProgress() {
       }
 
       navigatingRef.current = true;
+      if (finishTimerRef.current) clearTimeout(finishTimerRef.current);
       setState("loading");
 
       if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
