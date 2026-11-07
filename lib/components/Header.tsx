@@ -90,7 +90,10 @@ export function Header({ onLogoClick, onVintageClick }: HeaderProps) {
             <Button
               variant="outline"
               className="lg:flex items-center gap-2 border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-900"
-              onClick={onVintageClick}
+              onClick={() => {
+                if (onVintageClick) onVintageClick();
+                else window.location.href = "/about";
+              }}
             >
               <Sparkles className="h-4 w-4" />
               <span>Uy Tín Hàng Đầu</span>
