@@ -71,11 +71,15 @@ export function NavigationProgress() {
 
     navigatingRef.current = false;
     if (safetyTimerRef.current) clearTimeout(safetyTimerRef.current);
-    setState("complete");
 
-    finishTimerRef.current = setTimeout(() => {
-      setState("idle");
-    }, 260);
+    const frame = window.requestAnimationFrame(() => {
+      setState("complete");
+      finishTimerRef.current = setTimeout(() => {
+        setState("idle");
+      }, 260);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [pathname]);
 
   if (state === "idle") return null;
