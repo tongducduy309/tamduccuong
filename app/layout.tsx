@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    url: siteUrl,
+    url: `${siteUrl}/home`,
     siteName,
     title: defaultTitle,
     description: defaultDescription,
