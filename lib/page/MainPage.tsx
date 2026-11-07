@@ -34,6 +34,7 @@ const categories = [
   { icon: PaintBucket, title: "Tôn Màu", href: "/san-pham/ton-mau", subtitle: "AZ/Z, bảng màu đa dạng" },
   { icon: Boxes, title: "Thép Hộp", href: "/san-pham/thep-hop", subtitle: "Đa kích thước, mác thép" },
   { icon: Building2, title: "Thép Hình (I / H / U / V)", href: "/san-pham/thep-hinh", subtitle: "Tiêu chuẩn phổ biến" },
+  { icon: Layers, title: "Xà Gồ C / Z", href: "/san-pham/xa-go-c-z", subtitle: "Xà gồ thép cho hệ mái và vách nhà xưởng" },
 
   { icon: Warehouse, title: "Tấm Panel (PU/EPS)", href: "/san-pham/panel-pu-eps", subtitle: "Cách nhiệt, cách âm cho kho lạnh, nhà xưởng" },
   { icon: SquareStack, title: "Tôn PU", href: "/san-pham/ton-pu-cach-nhiet", subtitle: "3 lớp cách nhiệt, chống nóng hiệu quả" },
