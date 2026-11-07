@@ -52,8 +52,34 @@ export default function BlogsPage() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Tin tức và kiến thức vật liệu xây dựng",
+    description: "Kiến thức thực tế về tôn, sắt thép, xà gồ và vật liệu xây dựng từ Tâm Đức Cường.",
+    url: "https://tamduccuong.vercel.app/blogs",
+    inLanguage: "vi-VN",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListOrder: "https://schema.org/ItemListOrderDescending",
+      numberOfItems: posts.length,
+      itemListElement: posts.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(post.slug)}`,
+        name: post.title
+      }))
+    }
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionSchema).replace(/</g, "\\u003c")
+        }}
+      />
       <main className="overflow-hidden">
         {/* HERO */}
         <section className="relative overflow-hidden border-b bg-gradient-to-b from-red-50 via-amber-50 to-background">
