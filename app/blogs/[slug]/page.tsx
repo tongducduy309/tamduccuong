@@ -77,8 +77,44 @@ export default async function BlogDetailPage({
   try {
     const { frontmatter, contentHtml } = await getPostBySlug(slug);
 
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: frontmatter.title,
+      description: frontmatter.excerpt || "Kiến thức về tôn, sắt thép và vật liệu xây dựng từ Tâm Đức Cường.",
+      datePublished: frontmatter.date,
+      dateModified: frontmatter.date,
+      inLanguage: "vi-VN",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}`
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Tâm Đức Cường",
+        url: "https://tamduccuong.vercel.app"
+      },
+      ...(frontmatter.cover ? { image: [frontmatter.cover] } : {})
+    };
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Trang chủ", item: "https://tamduccuong.vercel.app/home" },
+        { "@type": "ListItem", position: 2, name: "Tin tức", item: "https://tamduccuong.vercel.app/blogs" },
+        { "@type": "ListItem", position: 3, name: frontmatter.title, item: `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}` }
+      ]
+    };
+
     return (
       <Layout>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([articleSchema, breadcrumbSchema]).replace(/</g, "\\u003c")
+          }}
+        />
         <main className="overflow-hidden">
           {/* HERO */}
           <section className="relative overflow-hidden border-b bg-gradient-to-b from-red-50 via-amber-50 to-background">
