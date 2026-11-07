@@ -15,7 +15,8 @@ import { useEffect, useState } from "react";
 
 const NAV = [
   { href: "/home", label: "Trang chủ" },
-  { href: "/about", label: "Về chúng tôi" },\n  { href: "/san-pham", label: "Sản phẩm" },
+  { href: "/about", label: "Về chúng tôi" },
+  { href: "/san-pham", label: "Sản phẩm" },
   { href: "/contact", label: "Liên hệ" },
   { href: "/quotation", label: "Bảng báo giá" },
   { href: "/blogs", label: "Bài viết" },
@@ -33,7 +34,8 @@ export function Header({ onLogoClick, onVintageClick }: HeaderProps) {
   const isActive = (href: string) => {
     if (!pathname) return false;
     // active cho /blogs và /blogs/slug
-    if (href === "/blogs") return pathname === "/blogs" || pathname.startsWith("/blogs/");\n    if (href === "/san-pham") return pathname === "/san-pham" || pathname.startsWith("/san-pham/");
+    if (href === "/blogs") return pathname === "/blogs" || pathname.startsWith("/blogs/");
+    if (href === "/san-pham") return pathname === "/san-pham" || pathname.startsWith("/san-pham/");
     return pathname === href;
   };
 
