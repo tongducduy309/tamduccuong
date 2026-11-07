@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return { title: "Không tìm thấy sản phẩm", robots: { index: false, follow: false } };
 
   return {
-    title: `${product.name} tại Nhà Bè, TP.HCM`,
-    description: `${product.shortDescription} Liên hệ Tâm Đức Cường để trao đổi quy cách và yêu cầu báo giá.`,
+    title: `${product.name} tại Hiệp Phước, TP.HCM`,
+    description: `${product.shortDescription} Hướng dẫn chọn, quy cách báo giá và liên hệ Tâm Đức Cường tại Hiệp Phước, TP.HCM.`,
     alternates: { canonical: `${SITE_URL}/san-pham/${product.slug}` },
     robots: { index: true, follow: true },
     openGraph: {
@@ -49,7 +49,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     brand: { "@type": "Brand", name: "Tâm Đức Cường" },
     manufacturer: { "@type": "Organization", name: "Nhà máy tôn thép Tâm Đức Cường", url: SITE_URL },
   };
-  const breadcrumb = {
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: product.faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };\n  const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -61,7 +61,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   return (
     <Layout>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([schema, breadcrumb]).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([schema, faqSchema, breadcrumb]).replace(/</g, "\\u003c") }} />
       <main className="container mx-auto max-w-5xl px-4 py-10 md:py-16">
         <Link href="/san-pham" className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-amber-700">
           <ArrowLeft className="h-4 w-4" /> Tất cả sản phẩm
@@ -85,7 +85,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <p className="mt-4 text-base leading-8 text-slate-700">{product.description}</p>
         </section>
 
-        <section className="mt-10 grid gap-8 md:grid-cols-2">
+        <section className="mt-10"><h2 className="text-2xl font-bold text-zinc-900">Hướng dẫn chọn {product.name.toLowerCase()} phù hợp</h2><ol className="mt-5 grid gap-4 md:grid-cols-3">{product.buyingGuide.map((item, index) => <li key={item} className="rounded-2xl border bg-white p-5"><span className="text-sm font-bold text-amber-700">Bước {index + 1}</span><p className="mt-2 text-sm leading-7 text-slate-700">{item}</p></li>)}</ol></section>\n        <section className="mt-10 grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border bg-white p-6">
             <h2 className="text-xl font-bold text-zinc-900">Ứng dụng phổ biến</h2>
             <ul className="mt-4 space-y-3">
@@ -112,6 +112,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           </div>
         </section>
 
+        <section className="mt-12 rounded-2xl border bg-white p-6 md:p-8"><h2 className="text-2xl font-bold text-zinc-900">{product.name} tại Hiệp Phước, TP. Hồ Chí Minh</h2><p className="mt-3 text-sm leading-8 text-slate-700">{product.localSearchIntro}</p><p className="mt-3 text-sm leading-7 text-slate-600">Địa chỉ được công bố: 413 Nguyễn Văn Tạo, Xã Hiệp Phước, TP. Hồ Chí Minh. Vui lòng liên hệ trước để xác nhận thời gian làm việc, tình trạng hàng và phạm vi giao nhận cho địa chỉ công trình.</p><div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold"><a href="https://www.google.com/maps/search/?api=1&query=413%20Nguyen%20Van%20Tao%2C%20Hiep%20Phuoc%2C%20Ho%20Chi%20Minh" target="_blank" rel="noreferrer" className="rounded-lg border px-4 py-2 text-zinc-800 hover:border-amber-400">Xem vị trí trên bản đồ</a><Link href="/contact" className="rounded-lg border px-4 py-2 text-zinc-800 hover:border-amber-400">Thông tin liên hệ</Link></div></section>
+        {product.relatedArticles.length > 0 && <section className="mt-12"><h2 className="text-2xl font-bold text-zinc-900">Bài viết hướng dẫn liên quan</h2><div className="mt-5 grid gap-4 sm:grid-cols-2">{product.relatedArticles.map((articleSlug) => <Link key={articleSlug} href={`/blogs/${articleSlug}`} className="rounded-xl border bg-white p-5 text-sm font-semibold capitalize text-zinc-800 hover:border-amber-300 hover:text-amber-800">Đọc bài tư vấn: {articleSlug.replaceAll("-", " ")}</Link>)}</div></section>}
         {related.length > 0 && (
           <section className="mt-12">
             <h2 className="text-2xl font-bold text-zinc-900">Sản phẩm liên quan</h2>
