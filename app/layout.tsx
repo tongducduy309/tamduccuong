@@ -64,10 +64,6 @@ export const metadata: Metadata = {
   creator: "Tâm Đức Cường",
   publisher: "Tâm Đức Cường",
 
-  alternates: {
-    canonical: siteUrl,
-  },
-
   robots: {
     index: true,
     follow: true,
