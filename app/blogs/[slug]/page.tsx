@@ -21,8 +21,10 @@ export async function generateMetadata({
       frontmatter.excerpt ||
       "Chia sẻ kiến thức và thông tin hữu ích về tôn, sắt, thép, xà gồ và vật liệu xây dựng.";
 
-    const url = `https://tamduccuong.vercel.app/blogs/${slug}`;
+    const url = `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}`;
     const ogImage = frontmatter.cover || "/og.png";
+    const publishedTime = new Date(frontmatter.date).toISOString();
+    const modifiedTime = new Date(frontmatter.updatedAt || frontmatter.date).toISOString();
 
     return {
       title,
@@ -36,6 +38,9 @@ export async function generateMetadata({
         title,
         description,
         siteName: "Tâm Đức Cường",
+        publishedTime,
+        modifiedTime,
+        authors: ["https://tamduccuong.vercel.app/about"],
         images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
       },
       twitter: {
