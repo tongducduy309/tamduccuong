@@ -49,7 +49,7 @@ export function ForumHomePage({ posts, onPostClick, onCreatePostClick }: ForumHo
           </h1>
           <p className="text-muted-foreground mb-8">
             Connect with fellow builders, share your projects, ask questions, and learn from the community. 
-            Whether you're a professional contractor or a DIY enthusiast, everyone is welcome!
+            Whether you&apos;re a professional contractor or a DIY enthusiast, everyone is welcome!
           </p>
           <Button size="lg" onClick={onCreatePostClick}>
             <PlusCircle className="mr-2 h-5 w-5" />
