@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -66,14 +67,14 @@ export function Footer() {
             <h4 className="mb-4 font-semibold">Thông tin</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/about" className="hover:text-foreground">
+                <Link href="/about" className="hover:text-foreground">
                   Về chúng tôi
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/blogs" className="hover:text-foreground">
+                <Link href="/blogs" className="hover:text-foreground">
                   Bài viết
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,14 +84,14 @@ export function Footer() {
             <h4 className="mb-4 font-semibold">Dịch vụ</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/quotation" className="hover:text-foreground">
+                <Link href="/quotation" className="hover:text-foreground">
                   Nhận báo giá
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-foreground">
+                <Link href="/contact" className="hover:text-foreground">
                   Tư vấn vật liệu
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -100,14 +101,14 @@ export function Footer() {
             <h4 className="mb-4 font-semibold">Hỗ trợ</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/contact" className="hover:text-foreground">
+                <Link href="/contact" className="hover:text-foreground">
                   Liên hệ
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground">
                   Câu hỏi thường gặp
-                </a>
+                </Link>
               </li>
             </ul>
 
