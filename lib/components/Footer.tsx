@@ -108,7 +108,7 @@ export function Footer() {
               <li>
                 <a href="#" className="hover:text-foreground">
                   Câu hỏi thường gặp
-                </Link>
+                </a>
               </li>
             </ul>
 
