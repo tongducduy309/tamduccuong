@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, PhoneCall, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -28,6 +28,7 @@ interface HeaderProps {
 
 export function Header({ onLogoClick, onVintageClick }: HeaderProps) {
   const pathname = usePathname();
+  const router = useRouter();
 
   const isActive = (href: string) => {
     if (!pathname) return false;
@@ -92,7 +93,7 @@ export function Header({ onLogoClick, onVintageClick }: HeaderProps) {
               className="lg:flex items-center gap-2 border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-900"
               onClick={() => {
                 if (onVintageClick) onVintageClick();
-                else window.location.href = "/about";
+                else router.push("/about");
               }}
             >
               <Sparkles className="h-4 w-4" />
