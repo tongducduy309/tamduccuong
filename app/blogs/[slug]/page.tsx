@@ -55,8 +55,8 @@ export async function generateMetadata({
         images: [ogImage],
       },
     };
-  } catch (e: any) {
-    if (e?.code === "POST_NOT_FOUND") notFound();
+  } catch (error: unknown) {
+    if (isPostNotFoundError(error)) notFound();
     return {};
   }
 }
@@ -296,8 +296,8 @@ export default async function BlogDetailPage({
         </main>
       </Layout>
     );
-  } catch (e: any) {
-    if (e?.code === "POST_NOT_FOUND") notFound();
-    throw e;
+  } catch (error: unknown) {
+    if (isPostNotFoundError(error)) notFound();
+    throw error;
   }
 }
