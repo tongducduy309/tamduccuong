@@ -28,7 +28,6 @@ import {
 import Divider from "../components/ui/divider";
 import Layout from "../layouts/(layout)/layout";
 import Link from "next/link";
-import Marquee from "../components/marquee";
 
 const categories = [
   { icon: Layers, title: "Tôn Lạnh / Tôn Kẽm", subtitle: "Cuộn, tấm – nhiều độ dày" },
@@ -259,34 +258,66 @@ export function MainPage() {
           </div>
         </section>
 
-        <section className="py-16">
-  <div className="container mx-auto px-4">
-    <SectionTitle
-      badge="Danh mục sản phẩm"
-      title="Nguồn hàng đa dạng cho nhiều hạng mục"
-      desc="Chọn nhanh chủng loại vật tư phù hợp với nhà dân, nhà xưởng và công trình."
-    />
+        <section className="relative overflow-hidden bg-slate-50/70 py-16 md:py-20">
+          <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-amber-100/60 blur-3xl" />
+          <div className="container relative mx-auto px-4">
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800">
+                  <Sparkles className="h-4 w-4" />
+                  <span>Danh mục sản phẩm</span>
+                </div>
+                <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-zinc-900 md:text-4xl">
+                  Đầy đủ vật tư cho mọi công trình
+                </h2>
+                <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600 md:text-base">
+                  Từ tôn, thép, xà gồ đến vật tư phụ và gia công theo yêu cầu — dễ dàng tìm đúng nhóm sản phẩm bạn cần.
+                </p>
+              </div>
 
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.15 }}
-      className="mt-10"
-    >
-      <Marquee pauseOnHover speed={40} className="[--duration:40s]">
-        {categories.map((category, index) => (
-          <div
-            key={`${category.title}-${index}`}
-            className="mx-3 w-[280px] sm:w-[300px] lg:w-[320px] shrink-0"
-          >
-            <CategoryCard {...category} delay={0} />
+              <div className="flex shrink-0 items-center gap-3">
+                <span className="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 sm:inline-flex">
+                  {categories.length} nhóm vật tư
+                </span>
+                <Link href="/contact">
+                  <Button className="bg-zinc-900 text-white shadow-sm transition-colors hover:bg-amber-700">
+                    Tư vấn chọn vật tư
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.12 }}
+              className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            >
+              {categories.map((category, index) => (
+                <motion.div key={category.title} variants={fadeUp}>
+                  <CategoryCard {...category} delay={index * 0.035} />
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <div className="mt-7 flex flex-col items-start justify-between gap-3 rounded-2xl border border-amber-100 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center">
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+                  <PhoneCall className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="font-semibold text-zinc-900">Chưa biết chọn loại vật tư nào?</p>
+                  <p className="mt-1 text-sm text-slate-600">Gửi nhu cầu và quy cách công trình, đội ngũ Tâm Đức Cường sẽ hỗ trợ tư vấn.</p>
+                </div>
+              </div>
+              <Link href="/contact" className="shrink-0 text-sm font-semibold text-amber-700 transition-colors hover:text-amber-800">
+                Liên hệ ngay <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
-        ))}
-      </Marquee>
-    </motion.div>
-  </div>
-</section>
+        </section>
 
         <section className="bg-amber-50/50 py-16">
           <div className="container mx-auto px-4">
