@@ -1,6 +1,7 @@
 import Layout from "@/lib/layouts/(layout)/layout";
 import { notFound } from "next/navigation";
 import { getPostBySlug } from "@/lib/blog";
+import { getProductBySlug } from "@/lib/products";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -81,7 +82,6 @@ export default async function BlogDetailPage({
 
   try {
     const { frontmatter, contentHtml } = await getPostBySlug(slug);
-    const { getProductBySlug } = await import("@/lib/products");
     const relatedProducts = (frontmatter.relatedProducts ?? []).map((productSlug) => getProductBySlug(productSlug)).filter(Boolean);
 
     const articleUrl = `https://tamduccuong.vercel.app/blogs/${encodeURIComponent(slug)}`;
@@ -242,6 +242,18 @@ export default async function BlogDetailPage({
                 "
                 dangerouslySetInnerHTML={{ __html: contentHtml }}
               />
+              {relatedProducts.length > 0 && (
+                <section className="mt-8 rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
+                  <h2 className="text-xl font-bold text-zinc-900">Sản phẩm được đề cập trong bài</h2>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {relatedProducts.map((product) => product && (
+                      <Link key={product.slug} href={`/san-pham/${product.slug}`} className="rounded-lg border bg-white px-4 py-2 text-sm font-semibold text-amber-800 hover:border-amber-400">
+                        {product.name} →
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
           </section>
 
