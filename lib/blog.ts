@@ -6,10 +6,12 @@ import html from "remark-html";
 import gfm from "remark-gfm";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
+const WORDS_PER_MINUTE = 200;
 
 export type BlogFrontmatter = {
   title: string;
-  date: string; // ISO
+  date: string;
+  updatedAt?: string;
   excerpt?: string;
   cover?: string;
   tags?: string[];
@@ -20,68 +22,99 @@ export type BlogPost = BlogFrontmatter & {
   slug: string;
 };
 
-export function getAllSlugs(): string[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
-  return fs
-    .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
+function estimateReadingMinutes(content: string): number {
+  const words = content
+    .replace(/![[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/[#>*`_~|-]/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+
+  return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
 }
 
-export function getAllPosts() {
+function toOptionalString(value: unknown): string | undefined {
+  return typeof value === "string" && value.trim() ? value.trim() : undefined;
+}
+
+export function getAllSlugs(): string[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
 
   return fs
     .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => {
-      const slug = f.replace(/\.md$/, "");
-      const fullPath = path.join(BLOG_DIR, f);
-      const file = fs.readFileSync(fullPath, "utf-8");
-      const { data } = matter(file);
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => file.replace(/\.md$/, ""));
+}
+
+export function getAllPosts(): BlogPost[] {
+  if (!fs.existsSync(BLOG_DIR)) return [];
+
+  return fs
+    .readdirSync(BLOG_DIR)
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => {
+      const slug = file.replace(/\.md$/, "");
+      const fullPath = path.join(BLOG_DIR, file);
+      const source = fs.readFileSync(fullPath, "utf-8");
+      const { data, content } = matter(source);
 
       return {
         slug,
         title: String(data.title ?? slug),
         date: String(data.date ?? "1970-01-01"),
-        excerpt: data.excerpt ? String(data.excerpt) : "",
+        updatedAt: toOptionalString(data.updatedAt),
+        excerpt: toOptionalString(data.excerpt),
         tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-        cover: data.cover ? String(data.cover) : null,
-        readingMinutes: data.readingMinutes,
+        cover: toOptionalString(data.cover),
+        readingMinutes:
+          Number(data.readingMinutes) > 0
+            ? Math.ceil(Number(data.readingMinutes))
+            : estimateReadingMinutes(content),
       };
     })
-    // ✅ SORT MỚI → CŨ
     .sort(
-      (a, b) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime()
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
 }
 
 export async function getPostBySlug(slug: string) {
+  // Slugs are file names, not arbitrary filesystem paths.
+  if (!/^[a-zA-Z0-9-]+$/.test(slug)) {
+    const error = new Error("POST_NOT_FOUND");
+    Object.assign(error, { code: "POST_NOT_FOUND" });
+    throw error;
+  }
+
   const fullPath = path.join(BLOG_DIR, `${slug}.md`);
 
   if (!fs.existsSync(fullPath)) {
-    const err = new Error("POST_NOT_FOUND");
-    // @ts-ignore
-    err.code = "POST_NOT_FOUND";
-    throw err;
+    const error = new Error("POST_NOT_FOUND");
+    Object.assign(error, { code: "POST_NOT_FOUND" });
+    throw error;
   }
 
-  const file = fs.readFileSync(fullPath, "utf-8");
-  const { data, content } = matter(file);
-
-  const processed = await remark().use(gfm).use(html, { sanitize: true }).process(content);
+  const source = fs.readFileSync(fullPath, "utf-8");
+  const { data, content } = matter(source);
+  const processed = await remark()
+    .use(gfm)
+    .use(html, { sanitize: true })
+    .process(content);
 
   return {
     frontmatter: {
       title: String(data.title ?? slug),
       date: String(data.date ?? "1970-01-01"),
-      excerpt: data.excerpt ? String(data.excerpt) : undefined,
-      cover: data.cover ? String(data.cover) : undefined,
+      updatedAt: toOptionalString(data.updatedAt),
+      excerpt: toOptionalString(data.excerpt),
+      cover: toOptionalString(data.cover),
       tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-      readingMinutes: data.readingMinutes ? Number(data.readingMinutes) : undefined,
-    },
+      readingMinutes:
+        Number(data.readingMinutes) > 0
+          ? Math.ceil(Number(data.readingMinutes))
+          : estimateReadingMinutes(content),
+    } satisfies BlogFrontmatter,
     contentHtml: processed.toString(),
+    wordCount: content.trim().split(/\s+/).filter(Boolean).length,
   };
 }
-
